@@ -21,7 +21,7 @@ def download_file(file_url):
     Download the specified file.
     :param file_url: str, URL of the file
     :return: str, content of the downloaded file
-    下载文件
+    下载文件提取内容
     """
     try:
         response = requests.get(file_url)
