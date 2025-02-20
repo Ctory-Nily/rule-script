@@ -165,7 +165,7 @@ if __name__ == "__main__":
             "folder_name": "DownloadCDN_CN",
             "write_yaml": True
         },
-                {
+        {
             "file_name":"Emby.list", 
             "file_urls": [
                 "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Emby.list",
@@ -174,7 +174,7 @@ if __name__ == "__main__":
             "folder_name": "Emby",
             "write_yaml": True
         },
-                {
+        {
             "file_name":"Talkatone.list", 
             "file_urls": [
                 "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Talkatone.list"
@@ -182,6 +182,15 @@ if __name__ == "__main__":
             "folder_name": "Talkatone",
             "write_yaml": True
         },
+        {
+            "file_name":"Bilibili.list", 
+            "file_urls": [
+                "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Bilibili.list",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.list",
+                ],
+            "folder_name": "Bilibili",
+            "write_yaml": True
+        }
         {
             "file_name":"userDirect.list", 
             "file_urls": [
