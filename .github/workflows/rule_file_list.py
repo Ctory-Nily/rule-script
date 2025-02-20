@@ -60,7 +60,7 @@ rule_list_data = [
         {
             "file_name":"Microsoft.list", 
             "file_urls": [
-                "hhttps://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Microsoft.list",
+                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Microsoft.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list"
                 ],
             "folder_name": "Microsoft",
