@@ -1,0 +1,13 @@
+# 规则名称: Bahamut
+# 规则数量: 9
+
+payload:
+  - DOMAIN,bahamut.akamaized.net
+  - DOMAIN,gamer-cds.cdn.hinet.net
+  - DOMAIN,gamer2-cds.cdn.hinet.net
+  - DOMAIN-SUFFIX,bahamut.com.tw
+  - DOMAIN-SUFFIX,digicert.com
+  - DOMAIN-SUFFIX,gamer.com.tw
+  - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,hinet.net
+  - DOMAIN-SUFFIX,viblast.com

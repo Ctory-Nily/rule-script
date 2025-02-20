@@ -1,0 +1,5 @@
+# 规则名称: YouTubeMusic
+# 规则数量: 1
+
+payload:
+  - DOMAIN,music.youtube.com
