@@ -1,6 +1,5 @@
 # 规则名称: DownloadCDN_CN
 # 规则数量: 17
-# 同步时间: 2025年02月20日 09时21分
 
 DOMAIN,alibaba.cdn.steampipe.steamcontent.com
 DOMAIN,assets1.xboxlive.cn
