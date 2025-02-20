@@ -193,11 +193,7 @@ if __name__ == "__main__":
             "file_name":"Emby.list", 
             "file_urls": [
                 "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Emby.list",
-<<<<<<< HEAD
-                "https://raw.githubusercontent.com/kirito12827/kk_zawuku/refs/heads/clash/user_rule/emby.list"
-=======
                 "https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/user_rule/emby.list"
->>>>>>> e931943 (2025年02月20日16时16分)
                 ],
             "folder_name": "Emby",
             "write_yaml": True
