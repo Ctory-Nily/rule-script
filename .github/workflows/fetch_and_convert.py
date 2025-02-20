@@ -1,8 +1,6 @@
 import os
 import requests
 import logging
-from datetime import datetime
-from zoneinfo import ZoneInfo
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -16,15 +14,6 @@ RULE_ORDER = [
     "IP-CIDR6",
     "IP-SUFFIX"
 ]
-
-def get_time():
-    # 获取当前时间，并指定时区（例如北京时间）
-    time_set = ZoneInfo('Asia/Shanghai')
-    now_time = datetime.now(time_set)
-
-    # 格式化为 "年月日时分" 的格式
-    formatted_time = now_time.strftime("%Y年%m月%d日 %H时%M分")
-    return formatted_time
 
 def download_file(file_url):
     """
@@ -99,8 +88,7 @@ def write_list_file(file_name, content, folder_name, folder_path):
     # Prepare content with header comments
     formatted_content = [
         f"# 规则名称: {rule_name}",
-        f"# 规则数量: {rule_count}",
-        f"# 同步时间: {now_time}\n",
+        f"# 规则数量: {rule_count}\n",
     ] + content
 
     try:
@@ -131,8 +119,7 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
     # Prepare content with payload format
     formatted_content = [
         f"# 规则名称: {rule_name}",
-        f"# 规则数量: {rule_count}",
-        f"# 同步时间: {now_time}\n",
+        f"# 规则数量: {rule_count}\n",
         "payload:"
     ] + [f"  - {line}" for line in content]
 
