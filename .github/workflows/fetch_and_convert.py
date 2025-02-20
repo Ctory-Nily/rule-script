@@ -158,6 +158,30 @@ if __name__ == "__main__":
     # 需要转换的文件链接 
     file_list_map = [
         {
+            "file_name":"userDirect.list", 
+            "file_urls": [
+                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userDirect/userDirect.list"
+                ],
+            "folder_name": "userDirect",
+            "write_yaml": True
+        },
+        {
+            "file_name":"userProxy.list", 
+            "file_urls": [
+                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userProxy/userProxy.list"
+                ],
+            "folder_name": "userProxy",
+            "write_yaml": True
+        },
+        {
+            "file_name":"userReject.list", 
+            "file_urls": [
+                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userReject/userReject.list"
+                ],
+            "folder_name": "userReject",
+            "write_yaml": True
+        },
+        {
             "file_name":"DownloadCDN_CN.list", 
             "file_urls": [
                 "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/DownloadCDN_CN.list"
@@ -185,36 +209,22 @@ if __name__ == "__main__":
         {
             "file_name":"Bilibili.list", 
             "file_urls": [
-                "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Bilibili.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.list",
+                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Bilibili.list",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.list",
                 ],
             "folder_name": "Bilibili",
             "write_yaml": True
         },
         {
-            "file_name":"userDirect.list", 
+            "file_name":"Google.list", 
             "file_urls": [
-                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userDirect/userDirect.list"
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
+                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Google.list"
                 ],
-            "folder_name": "userDirect",
+            "folder_name": "Google",
             "write_yaml": True
         },
-        {
-            "file_name":"userProxy.list", 
-            "file_urls": [
-                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userProxy/userProxy.list"
-                ],
-            "folder_name": "userProxy",
-            "write_yaml": True
-        },
-        {
-            "file_name":"userReject.list", 
-            "file_urls": [
-                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userReject/userReject.list"
-                ],
-            "folder_name": "userReject",
-            "write_yaml": True
-        }
+        
     ]
     
     # 批量处理
