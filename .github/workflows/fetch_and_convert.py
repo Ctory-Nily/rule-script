@@ -190,7 +190,7 @@ if __name__ == "__main__":
                 ],
             "folder_name": "Bilibili",
             "write_yaml": True
-        }
+        },
         {
             "file_name":"userDirect.list", 
             "file_urls": [
