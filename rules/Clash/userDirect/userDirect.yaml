@@ -1,0 +1,7 @@
+# 规则名称: userDirect
+# 规则数量: 2
+# 同步时间: 2025年02月20日 09时21分
+
+payload:
+  - DOMAIN,keylol.com
+  - DOMAIN,steamdb.info
