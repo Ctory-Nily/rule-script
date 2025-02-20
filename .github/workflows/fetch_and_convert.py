@@ -193,7 +193,11 @@ if __name__ == "__main__":
             "file_name":"Emby.list", 
             "file_urls": [
                 "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Emby.list",
+<<<<<<< HEAD
                 "https://raw.githubusercontent.com/kirito12827/kk_zawuku/refs/heads/clash/user_rule/emby.list"
+=======
+                "https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/user_rule/emby.list"
+>>>>>>> e931943 (2025年02月20日16时16分)
                 ],
             "folder_name": "Emby",
             "write_yaml": True
@@ -224,9 +228,26 @@ if __name__ == "__main__":
             "folder_name": "Google",
             "write_yaml": True
         },
-        
+        {
+            "file_name":"GoogleDrive.list", 
+            "file_urls": [
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleDrive/GoogleDrive.list"
+                ],
+            "folder_name": "GoogleDrive",
+            "write_yaml": True
+        },
+        {
+            "file_name":"GoogleSearch.list", 
+            "file_urls": [
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleSearch/GoogleSearch.list"
+                ],
+            "folder_name": "GoogleSearch",
+            "write_yaml": True
+        },
     ]
     
     # 批量处理
     for item in file_list_map:
         process_file(item["file_name"], item["file_urls"], item["folder_name"],item["write_yaml"], folder_path)
+
+
