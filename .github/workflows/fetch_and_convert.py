@@ -193,7 +193,7 @@ if __name__ == "__main__":
             "file_name":"Emby.list", 
             "file_urls": [
                 "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Emby.list",
-                "https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/rule/emby.list"
+                "https://raw.githubusercontent.com/kirito12827/kk_zawuku/refs/heads/clash/user_rule/emby.list"
                 ],
             "folder_name": "Emby",
             "write_yaml": True
