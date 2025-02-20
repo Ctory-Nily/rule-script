@@ -81,10 +81,7 @@ def write_list_file(file_name, content, folder_name, folder_path):
     list_file_path = os.path.join(folder_name, file_name)
     rule_count = len(content)
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
-
-    # 获取当前时间
-    now_time = get_time()
-
+    
     # Prepare content with header comments
     formatted_content = [
         f"# 规则名称: {rule_name}",
@@ -112,9 +109,6 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
     yaml_file_path = os.path.join(folder_name, f"{os.path.splitext(file_name)[0]}.yaml")
     rule_count = len(content)
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
-
-    # 获取当前时间
-    now_time = get_time()
     
     # Prepare content with payload format
     formatted_content = [
