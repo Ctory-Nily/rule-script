@@ -1,0 +1,19 @@
+# Netflix
+
+## 前言
+本文件由脚本自动生成
+
+## 规则统计
+| 类型 | 数量(条)  | 
+| ---- | ----  |
+| DOMAIN | 37  | 
+| DOMAIN-SUFFIX | 30  | 
+| DOMAIN-KEYWORD | 4  | 
+| IP-CIDR | 1119  | 
+| IP-CIDR6 | 4  | 
+| IP-SUFFIX | 0  | 
+| TOTAL | 1157  | 
+
+## 获取连接
+- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list 
+- https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Netflix.list 

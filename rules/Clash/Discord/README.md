@@ -1,0 +1,18 @@
+# Discord
+
+## 前言
+本文件由脚本自动生成
+
+## 规则统计
+| 类型 | 数量(条)  | 
+| ---- | ----  |
+| DOMAIN | 29  | 
+| DOMAIN-SUFFIX | 29  | 
+| DOMAIN-KEYWORD | 0  | 
+| IP-CIDR | 0  | 
+| IP-CIDR6 | 0  | 
+| IP-SUFFIX | 0  | 
+| TOTAL | 29  | 
+
+## 获取连接
+- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Discord/Discord.list 
