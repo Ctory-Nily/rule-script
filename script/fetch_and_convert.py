@@ -257,7 +257,10 @@ def total_md_file(folder_path, rule_list_data ,width=5):
         # 如果数据不足，用空格填充
         row += [""] * (width - len(row))
         row_str = "|" + "|".join(f"[{row}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{row})") + "|"  # 将数据拼接为表格行
-        md_content += row_str + "\n"
+        table += row_str + "\n"
+
+    # 合并
+    md_content += table
 
     # 创建输出目录（如果不存在）
     os.makedirs(folder_path, exist_ok=True)
