@@ -234,6 +234,34 @@ def process_file(file_name, urls, folder_name, write_yaml, folder_path):
         # 生成MD说明文件
         write_md_file(urls, sorted_content, folder_name, folder_path)
 
+# 生成一个总的MD说明文件
+def total_md_file(folder_path, rule_list_data ,width=5):
+
+    # 创建 Markdown 文件内容
+    md_content = f"""## 前言
+本文件由脚本自动生成
+
+## 规则列表
+"""
+
+    # 分组数据
+    for i in range(0, len(rule_list_data), width):
+        row = rule_list_data[i:i + width]  # 获取当前行的数据
+        row_str = "|" + "|".join(map(str, f'[{row["folder_name"]}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{row["folder_name"]})')) + "|"  # 将数据拼接为表格行
+        md_content += row_str + "\n"
+
+    # 创建输出目录（如果不存在）
+    os.makedirs(folder_path, exist_ok=True)
+
+    # 保存 Markdown 文件
+    md_file_path = os.path.join(folder_path, f"README.md")
+    try:
+        with open(md_file_path, "w", encoding="utf-8") as md_file:
+            md_file.write(md_content)
+            logging.info(f"md file saved: {md_file_path}")
+    except IOError as e:
+        logging.error(f"Failed to write md file {md_file_path}: {e}")
+
 if __name__ == "__main__":
 
     # 设置rule文件夹路径
@@ -251,5 +279,7 @@ if __name__ == "__main__":
     # 批量处理
     for item in rule_list_data:
         process_file(item["file_name"], item["file_urls"], item["folder_name"],item["write_yaml"], folder_path)
-
+    
+    # 生成总的MD文件
+    total_md_file(folder_path, rule_list_data)
 
