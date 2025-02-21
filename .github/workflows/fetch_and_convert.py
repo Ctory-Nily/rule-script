@@ -103,7 +103,7 @@ def write_list_file(file_name, content, folder_name, folder_path):
         f"# 规则名称: {rule_name}",
         f"# 规则总数量: {rule_count}",
         f"# DOMAIN: {count_dict['DOMAIN']}",
-        f"# DOMAIN-SUFFIX: {count_dict['DOMAIN-SUFFIX']}"
+        f"# DOMAIN-SUFFIX: {count_dict['DOMAIN-SUFFIX']}",
         f"# DOMAIN-KEYWORD: {count_dict['DOMAIN-KEYWORD']}",
         f"# IP-CIDR: {count_dict['IP-CIDR']}",
         f"# IP-CIDR6: {count_dict['IP-CIDR6']}",
@@ -146,16 +146,13 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
                 count_dict[keyword] += 1
 
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
-
-    logging.info(count_dict)
-    logging.info(content)
     
     # Prepare content with payload format
     formatted_content = [
         f"# 规则名称: {rule_name}",
         f"# 规则总数量: {rule_count}",
         f"# DOMAIN: {count_dict['DOMAIN']}",
-        f"# DOMAIN-SUFFIX: {count_dict['DOMAIN-SUFFIX']}"
+        f"# DOMAIN-SUFFIX: {count_dict['DOMAIN-SUFFIX']}",
         f"# DOMAIN-KEYWORD: {count_dict['DOMAIN-KEYWORD']}",
         f"# IP-CIDR: {count_dict['IP-CIDR']}",
         f"# IP-CIDR6: {count_dict['IP-CIDR6']}",
