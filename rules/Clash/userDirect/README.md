@@ -15,4 +15,4 @@
 | TOTAL | 2  | 
 
 ## 获取连接
-- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userDirect/userDirect.list 
+- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userDirect.list 

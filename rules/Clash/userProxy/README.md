@@ -15,4 +15,4 @@
 | TOTAL | 1  | 
 
 ## 获取连接
-- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userProxy/userProxy.list 
+- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userProxy.list 

@@ -15,4 +15,4 @@
 | TOTAL | 0  | 
 
 ## 获取连接
-- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/userReject/userReject.list 
+- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userReject.list 
