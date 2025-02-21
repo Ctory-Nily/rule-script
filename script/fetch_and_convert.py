@@ -200,11 +200,14 @@ if __name__ == "__main__":
 
     # 获取 rule_file_list.json 的路径
     current_dir = os.path.dirname(os.path.abspath(__file__))
+    logging.info(current_dir)
     data_path = os.path.join(current_dir, "rule_file_list.json")
+    logging.info(data_path)
 
     # 读取 rule_file_list.json 文件
     with open(data_path, "r", encoding="utf-8") as f:
         rule_list_data = json.load(f)
+    logging.info(rule_list_data)
 
     # 批量处理
     for item in rule_list_data:
