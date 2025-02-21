@@ -208,7 +208,7 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
         logging.error(f"Failed to write YAML file {yaml_file_path}: {e}")
 
 # 批量处理每一行数据
-def process_file(file_name, urls, folder_name, write_yaml, folder_path):
+def process_file(file_name, urls, folder_name, folder_path):
     """
     获取list文件内的全部文本内容
     """
@@ -229,10 +229,10 @@ def process_file(file_name, urls, folder_name, write_yaml, folder_path):
     # Write .list and .yaml files
     # 分别改写成 .list文件 和 .yaml文件
     write_list_file(file_name, sorted_content, folder_name ,folder_path)
-    if write_yaml:
-        write_yaml_file(file_name, sorted_content, folder_name, folder_path)    
-        # 生成MD说明文件
-        write_md_file(urls, sorted_content, folder_name, folder_path)
+    write_yaml_file(file_name, sorted_content, folder_name, folder_path)    
+
+    # 生成MD说明文件
+    write_md_file(urls, sorted_content, folder_name, folder_path)
 
 # 生成一个总的MD说明文件
 def total_md_file(folder_path, rule_list_data ,width=5):
@@ -290,7 +290,7 @@ if __name__ == "__main__":
 
     # 批量处理
     for item in rule_list_data:
-        process_file(item["file_name"], item["file_urls"], item["folder_name"],item["write_yaml"], folder_path)
+        process_file(item["file_name"], item["file_urls"], item["folder_name"], folder_path)
     
     # 生成总的MD文件
     total_md_file(folder_path, rule_list_data)

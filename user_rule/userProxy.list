@@ -1,0 +1,10 @@
+# 规则名称: userProxy
+# 规则总数量: 1
+# DOMAIN: 1
+# DOMAIN-SUFFIX: 0
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
+
+DOMAIN,zi0.cc
