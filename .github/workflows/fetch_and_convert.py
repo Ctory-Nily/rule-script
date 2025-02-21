@@ -107,7 +107,7 @@ def write_list_file(file_name, content, folder_name, folder_path):
         f"# DOMAIN-KEYWORD: {count_dict['DOMAIN-KEYWORD']}",
         f"# IP-CIDR: {count_dict['IP-CIDR']}",
         f"# IP-CIDR6: {count_dict['IP-CIDR6']}",
-        f"# IP-SUFFIX: {count_dict['IP-SUFFIX']}\n"
+        f"# IP-SUFFIX: {count_dict['IP-SUFFIX']}\n",
     ] + content
 
     try:
@@ -156,7 +156,7 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
         f"# DOMAIN-KEYWORD: {count_dict['DOMAIN-KEYWORD']}",
         f"# IP-CIDR: {count_dict['IP-CIDR']}",
         f"# IP-CIDR6: {count_dict['IP-CIDR6']}",
-        f"# IP-SUFFIX: {count_dict['IP-SUFFIX']}\n"
+        f"# IP-SUFFIX: {count_dict['IP-SUFFIX']}\n",
         "payload:"
     ] + [f"  - {line}" for line in content]
 
