@@ -1,5 +1,11 @@
 # 规则名称: Bahamut
-# 规则数量: 9
+# 规则总数量: 9
+# DOMAIN: 9
+# DOMAIN-SUFFIX: 6
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 payload:
   - DOMAIN,bahamut.akamaized.net

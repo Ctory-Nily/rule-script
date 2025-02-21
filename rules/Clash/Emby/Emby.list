@@ -1,5 +1,11 @@
 # 规则名称: Emby
-# 规则数量: 181
+# 规则总数量: 181
+# DOMAIN: 175
+# DOMAIN-SUFFIX: 170
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 6
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 DOMAIN,195.201.86.86
 DOMAIN,cc.coemn.com

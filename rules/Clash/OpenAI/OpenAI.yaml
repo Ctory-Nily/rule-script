@@ -1,5 +1,11 @@
 # 规则名称: OpenAI
-# 规则数量: 37
+# 规则总数量: 37
+# DOMAIN: 34
+# DOMAIN-SUFFIX: 25
+# DOMAIN-KEYWORD: 1
+# IP-CIDR: 2
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 payload:
   - DOMAIN,browser-intake-datadoghq.com

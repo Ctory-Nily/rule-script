@@ -1,5 +1,11 @@
 # 规则名称: TikTok
-# 规则数量: 103
+# 规则总数量: 103
+# DOMAIN: 102
+# DOMAIN-SUFFIX: 56
+# DOMAIN-KEYWORD: 9
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 payload:
   - DOMAIN,api.snapkit.com

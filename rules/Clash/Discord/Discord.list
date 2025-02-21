@@ -1,5 +1,11 @@
 # 规则名称: Discord
-# 规则数量: 29
+# 规则总数量: 29
+# DOMAIN: 29
+# DOMAIN-SUFFIX: 29
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 DOMAIN-SUFFIX,airhorn.solutions
 DOMAIN-SUFFIX,airhornbot.com

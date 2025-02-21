@@ -1,5 +1,11 @@
 # 规则名称: PayPal
-# 规则数量: 247
+# 规则总数量: 247
+# DOMAIN: 247
+# DOMAIN-SUFFIX: 246
+# DOMAIN-KEYWORD: 1
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 payload:
   - DOMAIN-SUFFIX,account-paypal.info

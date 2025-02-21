@@ -1,5 +1,11 @@
 # 规则名称: GoogleDrive
-# 规则数量: 6
+# 规则总数量: 6
+# DOMAIN: 5
+# DOMAIN-SUFFIX: 4
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 payload:
   - DOMAIN,www.googleapis.com

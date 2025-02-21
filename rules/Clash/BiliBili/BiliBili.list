@@ -1,5 +1,11 @@
 # 规则名称: BiliBili
-# 规则数量: 131
+# 规则总数量: 131
+# DOMAIN: 117
+# DOMAIN-SUFFIX: 62
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 8
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com
 DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com

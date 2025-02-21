@@ -1,5 +1,11 @@
 # 规则名称: Instagram
-# 规则数量: 4
+# 规则总数量: 4
+# DOMAIN: 4
+# DOMAIN-SUFFIX: 3
+# DOMAIN-KEYWORD: 1
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,instagr.am

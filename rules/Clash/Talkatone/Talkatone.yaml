@@ -1,5 +1,11 @@
 # 规则名称: Talkatone
-# 规则数量: 6
+# 规则总数量: 6
+# DOMAIN: 3
+# DOMAIN-SUFFIX: 3
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 3
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 payload:
   - DOMAIN-SUFFIX,mobilefuse.com

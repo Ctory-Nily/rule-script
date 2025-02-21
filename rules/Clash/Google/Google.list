@@ -1,5 +1,11 @@
 # 规则名称: Google
-# 规则数量: 733
+# 规则总数量: 733
+# DOMAIN: 722
+# DOMAIN-SUFFIX: 716
+# DOMAIN-KEYWORD: 5
+# IP-CIDR: 5
+# IP-CIDR6: 1
+# IP-SUFFIX: 0
 
 DOMAIN,voice.telephony.goog
 DOMAIN-SUFFIX,0emm.com

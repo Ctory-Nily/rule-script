@@ -1,5 +1,11 @@
 # 规则名称: Microsoft
-# 规则数量: 669
+# 规则总数量: 669
+# DOMAIN: 667
+# DOMAIN-SUFFIX: 662
+# DOMAIN-KEYWORD: 4
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
 
 payload:
   - DOMAIN,vsmarketplacebadge.apphb.com
