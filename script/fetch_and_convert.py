@@ -247,6 +247,10 @@ def total_md_file(folder_path, rule_list_data ,width=5):
     # 提取所有 file_name
     folder_names = [item.get("folder_name", "") for item in rule_list_data]
 
+    # 表头
+    table = "| 规则名称 |" + "  |" * (width-1) + "\n"
+    table += "|" + "---|" * width + "\n"
+
     # 分组数据
     for i in range(0, len(folder_names), width):
         row = folder_names[i:i + width]  # 获取当前行的数据
