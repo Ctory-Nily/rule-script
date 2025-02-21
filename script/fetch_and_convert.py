@@ -68,6 +68,68 @@ def sort_rules(rules):
 
     return sorted(rules, key=rule_key)
 
+# 单独统计各个规则的数量
+def every_rule_number(content):
+    # 定义要统计的关键词列表
+    keywords = ["DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "IP-CIDR", "IP-CIDR6", "IP-SUFFIX"]
+
+    # 初始化一个字典来存储统计结果
+    count_dict = {keyword: 0 for keyword in keywords}
+
+    # 遍历数据并统计
+    for line in content:
+        for keyword in keywords:
+            if line.startswith(keyword):
+                count_dict[keyword] += 1
+    
+    return count_dict
+
+# 生成md文件
+def write_md_file(urls, content, folder_name, folder_path):
+
+    # 规则总数
+    rule_count = len(content)   
+
+    # 获取到单独统计的各个规则的数量
+    count_dict = every_rule_number(content)
+
+    # 创建 Markdown 文件内容
+    md_content = f"""# {folder_name}
+
+## 前言
+本文件由脚本自动生成
+
+## 规则统计
+| 类型 | 数量(条)  | 
+| ---- | ----  |
+| DOMAIN | {count_dict['DOMAIN']}  | 
+| DOMAIN-SUFFIX | {count_dict['DOMAIN-SUFFIX']}  | 
+| DOMAIN-KEYWORD | {count_dict['DOMAIN-KEYWORD']}  | 
+| IP-CIDR | {count_dict['IP-CIDR']}  | 
+| IP-CIDR6 | {count_dict['IP-CIDR6']}  | 
+| IP-SUFFIX | {count_dict['IP-SUFFIX']}  | 
+| TOTAL | {rule_count}  | 
+
+## 获取连接
+"""
+
+    # 添加文件下载地址
+    for url in urls:
+        md_content += f"- {url} \n"
+
+    # 创建输出目录（如果不存在）
+    folder_name = folder_path + folder_name
+    os.makedirs(folder_name, exist_ok=True)
+
+    # 保存 Markdown 文件
+    md_file_path = os.path.join(folder_name, f"README.md")
+    try:
+        with open(md_file_path, "w", encoding="utf-8") as md_file:
+            md_file.write(md_content)
+            logging.info(f"md file saved: {md_file_path}")
+    except IOError as e:
+        logging.error(f"Failed to write md file {md_file_path}: {e}")
+
 # 处理list文件
 def write_list_file(file_name, content, folder_name, folder_path):
     """
@@ -83,21 +145,10 @@ def write_list_file(file_name, content, folder_name, folder_path):
 
     # 规则总数
     rule_count = len(content)
-
-    # 定义要统计的关键词列表
-    keywords = ["DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "IP-CIDR", "IP-CIDR6", "IP-SUFFIX"]
-
-    # 初始化一个字典来存储统计结果
-    count_dict = {keyword: 0 for keyword in keywords}
-
-    # 遍历数据并统计
-    for line in content:
-        for keyword in keywords:
-            if line.startswith(keyword):
-                count_dict[keyword] += 1
-
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
     
+    count_dict = every_rule_number(content)
+
     # Prepare content with header comments
     formatted_content = [
         f"# 规则名称: {rule_name}",
@@ -132,21 +183,10 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
 
     # 规则总数
     rule_count = len(content)
-
-    # 定义要统计的关键词列表
-    keywords = ["DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "IP-CIDR", "IP-CIDR6", "IP-SUFFIX"]
-
-    # 初始化一个字典来存储统计结果
-    count_dict = {keyword: 0 for keyword in keywords}
-
-    # 遍历数据并统计
-    for line in content:
-        for keyword in keywords:
-            if line.startswith(keyword):
-                count_dict[keyword] += 1
-
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
     
+    count_dict = every_rule_number(content)
+
     # Prepare content with payload format
     formatted_content = [
         f"# 规则名称: {rule_name}",
@@ -167,7 +207,7 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
     except IOError as e:
         logging.error(f"Failed to write YAML file {yaml_file_path}: {e}")
 
-# 批量处理多余的list文件
+# 批量处理每一行数据
 def process_file(file_name, urls, folder_name, write_yaml, folder_path):
     """
     获取list文件内的全部文本内容
@@ -190,7 +230,9 @@ def process_file(file_name, urls, folder_name, write_yaml, folder_path):
     # 分别改写成 .list文件 和 .yaml文件
     write_list_file(file_name, sorted_content, folder_name ,folder_path)
     if write_yaml:
-        write_yaml_file(file_name, sorted_content, folder_name, folder_path)
+        write_yaml_file(file_name, sorted_content, folder_name, folder_path)    
+        # 生成MD说明文件
+        write_md_file(urls, sorted_content, folder_name, folder_path)
 
 if __name__ == "__main__":
 
@@ -200,14 +242,11 @@ if __name__ == "__main__":
 
     # 获取 rule_file_list.json 的路径
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    logging.info(current_dir)
     data_path = os.path.join(current_dir, "rule_file_list.json")
-    logging.info(data_path)
 
     # 读取 rule_file_list.json 文件
     with open(data_path, "r", encoding="utf-8") as f:
         rule_list_data = json.load(f)
-    logging.info(rule_list_data)
 
     # 批量处理
     for item in rule_list_data:

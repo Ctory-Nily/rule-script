@@ -31,7 +31,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pyyaml requests
     
-    # 运行fetch_and_convert.py脚本
+    # 运行fetch_and_convert.py脚本 生成合并list文件
     - name: Run fetch and convert script
       run: |
         python script/fetch_and_convert.py
