@@ -147,8 +147,8 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
 
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
 
-    console.log(count_dict)
-    console.log(content)
+    logging.info(count_dict)
+    logging.info(content)
     
     # Prepare content with payload format
     formatted_content = [
