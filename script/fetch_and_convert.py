@@ -244,10 +244,15 @@ def total_md_file(folder_path, rule_list_data ,width=5):
 ## 规则列表
 """
 
+    # 提取所有 file_name
+    folder_names = [item.get("folder_name", "") for item in rule_list_data]
+
     # 分组数据
-    for i in range(0, len(rule_list_data), width):
-        row = rule_list_data[i:i + width]  # 获取当前行的数据
-        row_str = "|" + "|".join(map(str, f'[{row["folder_name"]}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{row["folder_name"]})')) + "|"  # 将数据拼接为表格行
+    for i in range(0, len(folder_names), width):
+        row = folder_names[i:i + width]  # 获取当前行的数据
+        # 如果数据不足，用空格填充
+        row += [""] * (width - len(row))
+        row_str = "|" + "|".join(f"[{row}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{row})") + "|"  # 将数据拼接为表格行
         md_content += row_str + "\n"
 
     # 创建输出目录（如果不存在）
