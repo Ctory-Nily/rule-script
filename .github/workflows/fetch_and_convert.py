@@ -80,13 +80,34 @@ def write_list_file(file_name, content, folder_name, folder_path):
     os.makedirs(folder_name, exist_ok=True)
 
     list_file_path = os.path.join(folder_name, file_name)
+
+    # 规则总数
     rule_count = len(content)
+
+    # 定义要统计的关键词列表
+    keywords = ["DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "IP-CIDR", "IP-CIDR6", "IP-SUFFIX"]
+
+    # 初始化一个字典来存储统计结果
+    count_dict = {keyword: 0 for keyword in keywords}
+
+    # 遍历数据并统计
+    for line in content:
+        for keyword in keywords:
+            if line.startswith(keyword):
+                count_dict[keyword] += 1
+
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
     
     # Prepare content with header comments
     formatted_content = [
         f"# 规则名称: {rule_name}",
-        f"# 规则数量: {rule_count}\n",
+        f"# 规则总数量: {rule_count}",
+        f"# DOMAIN: {count_dict['DOMAIN']}",
+        f"# DOMAIN-SUFFIX: {count_dict['DOMAIN-SUFFIX']}"
+        f"# DOMAIN-KEYWORD: {count_dict['DOMAIN-KEYWORD']}",
+        f"# IP-CIDR: {count_dict['IP-CIDR']}",
+        f"# IP-CIDR6: {count_dict['IP-CIDR6']}",
+        f"# IP-SUFFIX: {count_dict['IP-SUFFIX']}\n"
     ] + content
 
     try:
@@ -108,13 +129,34 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
     os.makedirs(folder_name, exist_ok=True)
 
     yaml_file_path = os.path.join(folder_name, f"{os.path.splitext(file_name)[0]}.yaml")
+
+    # 规则总数
     rule_count = len(content)
+
+    # 定义要统计的关键词列表
+    keywords = ["DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "IP-CIDR", "IP-CIDR6", "IP-SUFFIX"]
+
+    # 初始化一个字典来存储统计结果
+    count_dict = {keyword: 0 for keyword in keywords}
+
+    # 遍历数据并统计
+    for line in content:
+        for keyword in keywords:
+            if line.startswith(keyword):
+                count_dict[keyword] += 1
+
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
     
     # Prepare content with payload format
     formatted_content = [
         f"# 规则名称: {rule_name}",
-        f"# 规则数量: {rule_count}\n",
+        f"# 规则总数量: {rule_count}",
+        f"# DOMAIN: {count_dict['DOMAIN']}",
+        f"# DOMAIN-SUFFIX: {count_dict['DOMAIN-SUFFIX']}"
+        f"# DOMAIN-KEYWORD: {count_dict['DOMAIN-KEYWORD']}",
+        f"# IP-CIDR: {count_dict['IP-CIDR']}",
+        f"# IP-CIDR6: {count_dict['IP-CIDR6']}",
+        f"# IP-SUFFIX: {count_dict['IP-SUFFIX']}\n"
         "payload:"
     ] + [f"  - {line}" for line in content]
 
