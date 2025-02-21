@@ -1,7 +1,7 @@
 import os
 import requests
 import logging
-from rule_file_list import rule_list_data
+import json
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -196,7 +196,16 @@ if __name__ == "__main__":
 
     # 设置rule文件夹路径
     folder_path = 'rules/Clash/'
-    
+
+
+    # 获取 rule_file_list.json 的路径
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(current_dir, "rule_file_list.json")
+
+    # 读取 rule_file_list.json 文件
+    with open(data_path, "r", encoding="utf-8") as f:
+        rule_list_data = json.load(f)
+
     # 批量处理
     for item in rule_list_data:
         process_file(item["file_name"], item["file_urls"], item["folder_name"],item["write_yaml"], folder_path)

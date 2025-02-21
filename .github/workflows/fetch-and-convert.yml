@@ -34,7 +34,7 @@ jobs:
     # 运行fetch_and_convert.py脚本
     - name: Run fetch and convert script
       run: |
-        python .github/workflows/fetch_and_convert.py
+        python script/fetch_and_convert.py
 
     # 提交推送
     - name: Commit and push changes

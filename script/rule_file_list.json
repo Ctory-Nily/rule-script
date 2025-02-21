@@ -1,4 +1,4 @@
-rule_list_data = [
+[
         {
             "file_name":"userDirect.list", 
             "file_urls": [
