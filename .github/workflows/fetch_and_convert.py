@@ -146,6 +146,9 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
                 count_dict[keyword] += 1
 
     rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
+
+    console.log(count_dict)
+    console.log(content)
     
     # Prepare content with payload format
     formatted_content = [
