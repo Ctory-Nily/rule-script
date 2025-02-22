@@ -187,6 +187,7 @@ def write_list_file(file_name: str, content: List[str], folder_name: str, folder
         formatted_content.append(f"# {prefix}: {count}")
 
     # 合并数组
+    formatted_content.append("")
     formatted_content.extend(content)
 
     try:
@@ -229,6 +230,7 @@ def write_yaml_file(file_name: str, content: List[str], folder_name: str, folder
         formatted_content.append(f"# {prefix}: {count}")
 
     # 合并数组
+    formatted_content.append("")
     formatted_content.append("payload:")
     for line in content:
         formatted_content.append(f"  - {line}")

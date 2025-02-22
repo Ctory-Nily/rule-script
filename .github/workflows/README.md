@@ -3,7 +3,10 @@
 
 ## 各文件说明
 - **clear-commit.yml**:     
-    手动工作流, 用来清理工作流, 会把项目文件移到一个新的分支上
+    手动工作流, 用来清理工作流, 将整个项目移到一个新的分支上
     
 - **fetch-and-convert.yml**:     
-    自动工作流, 根据规则列表自动生成新的 list 文件和 yaml 文件存放到指定文件夹下
+    自动工作流, 当检测到 process-rule 工作流完成后会自动触发, 每天0点也会自动触发, 执行 fetch_and_convert.py 脚本
+
+- **process-rule.yml**:     
+    自动工作流, 当检测到 user_rule 文件夹下有变动就会触发, 执行 process_rule.py 脚本
