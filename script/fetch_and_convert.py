@@ -295,7 +295,6 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
 """
     folder_names = [item["folder_name"] for item in rule_list_data]
 
-    # 将 folder_names 分成多行，每行 num_columns 个单元格
     rows = []
     for i in range(0, len(folder_names), width):
         row = folder_names[i:i + width]
@@ -309,12 +308,19 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     # 生成表格
     table = []
     for row in rows:
-        table.append("|")
-        table.append("|".join(f"[{cell:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{cell:<10})" for cell in row))  # 每个单元格宽度为 10
+        # 确保每个单元格是字符串
+        formatted_row = [f"{cell:<10}" for cell in row]
+        table.append("|".join(formatted_row))  # 使用字符串列表
 
-    # 合并
+    # 添加 Markdown 表格语法
+    markdown_table = []
+    markdown_table.append("| 规则 |" + " | ".join(["   "] * (width-1) ) + " |")  # 表头
+    markdown_table.append("|" + "----------|" * width)  # 分隔线
+
     for line in table:
-        md_content += line
+        markdown_table.append("| " + f"[{line}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{line})" + " |")  # 表格内容
+
+    md_content += "\n".join(markdown_table)
 
     try:
         with open(md_file_path, "w", encoding="utf-8") as md_file:
