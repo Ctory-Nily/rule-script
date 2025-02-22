@@ -318,8 +318,10 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     markdown_table.append("|" + "----------|" * width)  # 分隔线
 
     for line in table:
-        markdown_table.append("| " + f"[{line}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{line})" + " |")  # 表格内容
+        markdown_table.append("| " + f"[{line}]" + f"(https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{line})" + " |")  # 表格内容
+        logging.info("| " + f"[{line}]" + f"(https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{line})" + " |")
 
+    logging.info(markdown_table)
     md_content += "\n".join(markdown_table)
 
     try:
