@@ -133,14 +133,13 @@ def write_md_file(urls: List[str], content: List[str], folder_name: str, folder_
 
     for prefix, count in rule_number_dict.items():
         md_content += f"| {prefix} | {count} | \n"
-
     md_content += f"| TOTAL | {rule_count} | \n"
 
-    md_content += f"## Clash"
-    md_content += f"### 使用说明"
+    md_content += f"## Clash \n"
+    md_content += f"### 使用说明 \n"
     md_content += f"{folder_name}.yaml, 请使用 behavior: 'classical' \n"
 
-    md_content += f"### 规则链接"
+    md_content += f"### 规则链接 \n"
     for url in urls:
         md_content += f"- {url} \n"
 
