@@ -21,6 +21,13 @@
             "folder_name": "userReject"
         },
         {
+            "file_name":"JP_Only.list", 
+            "file_urls": [
+                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/JP_Only.list"
+                ],
+            "folder_name": "JP_Only"
+        },
+        {
             "file_name":"Emby.list", 
             "file_urls": [
                 "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Emby.list",
