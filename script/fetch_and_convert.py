@@ -309,7 +309,7 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     table = []
     for row in rows:
         # 确保每个单元格是字符串
-        formatted_row = [f"{cell:<10}" for cell in row]
+        formatted_row = [f"[{cell:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{cell:<10})" for cell in row]
         table.append("|".join(formatted_row))  # 使用字符串列表
 
     # 添加 Markdown 表格语法
@@ -318,10 +318,8 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     markdown_table.append("|" + "----------|" * width)  # 分隔线
 
     for line in table:
-        markdown_table.append("| " + f"[{line}]" + f"(https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{line})" + " |")  # 表格内容
-        logging.info("| " + f"[{line}]" + f"(https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{line})" + " |")
+        markdown_table.append("| " + line + " |")  # 表格内容
 
-    logging.info(markdown_table)
     md_content += "\n".join(markdown_table)
 
     try:
