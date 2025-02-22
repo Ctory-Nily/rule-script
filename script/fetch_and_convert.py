@@ -284,14 +284,16 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     # 获取当前时间
     now_time = get_time()
 
+    total_list_data_number = len(rule_list_data)
+
     # 创建 Markdown 文件内容
     md_content = f"""## 前言
 本文件由脚本自动生成
 
 ## 规则列表
-最后同步时间: {now_time}
+处理的规则总计: {total_list_data_number} 
 
-各规则统计:
+最后同步时间: {now_time} \n
 """
     folder_names = [item["folder_name"] for item in rule_list_data]
 
@@ -306,19 +308,13 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
             row.append(" " * 10)  # 用空格填充空单元格
 
     # 生成表格
-    table = []
+    markdown_table = []
+    markdown_table.append("| 规则名称 |" + " | ".join(["   "] * (width - 1) ) + " |")  # 表头
+    markdown_table.append("|" + "----------|" * width)  # 分隔线
     for row in rows:
         # 确保每个单元格是字符串
         formatted_row = [f"[{cell:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{cell:<10})" for cell in row]
-        table.append("|".join(formatted_row))  # 使用字符串列表
-
-    # 添加 Markdown 表格语法
-    markdown_table = []
-    markdown_table.append("| 规则 |" + " | ".join(["   "] * (width-1) ) + " |")  # 表头
-    markdown_table.append("|" + "----------|" * width)  # 分隔线
-
-    for line in table:
-        markdown_table.append("| " + line + " |")  # 表格内容
+        markdown_table.append("| " + "|".join(formatted_row) + " |")  # 使用字符串列表
 
     md_content += "\n".join(markdown_table)
 
