@@ -3,7 +3,7 @@ import requests
 import logging
 import json
 
-# Configure logging
+# 配置日志记录
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # 定义规则类型的排序优先级
@@ -19,25 +19,24 @@ RULE_ORDER = [
 def download_file(file_url):
     """
     Download the specified file.
-    :param file_url: str, URL of the file
-    :return: str, content of the downloaded file
+    :param file_url: 文件URL
+    :return: 文件内容
     下载文件提取内容
     """
     try:
         response = requests.get(file_url)
-        response.raise_for_status()  # Raise an exception for HTTP errors
-        logging.info(f"File downloaded from: {file_url}")
-        return response.text  # Return file content
+        response.raise_for_status()  # 抛出 HTTP 错误
+        logging.info(f"文件下载成功 from: {file_url}")
+        return response.text  # 返回文件内容
     except requests.RequestException as e:
-        logging.error(f"Failed to download {file_url}: {e}")
+        logging.error(f"文件下载失败 {file_url}: {e}")
         return None
 
 def merge_file_contents(file_contents):
     """
-    Merge file contents, removing duplicates and preserving order.
-    :param file_contents: list, content of each file
-    :return: list, merged content
-    去除带#的文本内容
+    合并文件内容，去除重复项和注释行
+    :param file_contents: 文件内容列表
+    :return: 合并后的文件内容列表
     """
     merged_lines = []
     seen_lines = set()
@@ -54,17 +53,16 @@ def merge_file_contents(file_contents):
 
 def sort_rules(rules):
     """
-    Sort rules based on RULE_ORDER and alphabetically.
-    :param rules: list, list of rule strings
-    :return: list, sorted rules
-    根据指定的规则进行排序
+    规则排序
+    :param rules: 规则列表
+    :return: 排序后的规则列表
     """
     def rule_key(line):
         parts = line.split(",")
         if parts[0] in RULE_ORDER:
-            return (RULE_ORDER.index(parts[0]), parts[1])  # Sort by rule type and alphabetically
+            return (RULE_ORDER.index(parts[0]), parts[1])  # 按规则类型和字母顺序排序
         else:
-            return (len(RULE_ORDER), line)  # Unknown types go to the end
+            return (len(RULE_ORDER), line)  # 异常类型
 
     return sorted(rules, key=rule_key)
 
@@ -126,16 +124,16 @@ def write_md_file(urls, content, folder_name, folder_path):
     try:
         with open(md_file_path, "w", encoding="utf-8") as md_file:
             md_file.write(md_content)
-            logging.info(f"md file saved: {md_file_path}")
+            logging.info(f"MD 文件保存成功: {md_file_path}")
     except IOError as e:
-        logging.error(f"Failed to write md file {md_file_path}: {e}")
+        logging.error(f"MD 文件保存失败 {md_file_path}: {e}")
 
 # 处理list文件
 def write_list_file(file_name, content, folder_name, folder_path):
     """
-    Write sorted content to a .list file with header comments.
-    :param file_name: str, name of the .list file
-    :param content: list, sorted content
+    将内容写进 .list 文件，并添加标题注释
+    :param file_name: 文件名称
+    :param content: 内容列表
     改写list文件
     """
     folder_name = folder_path + folder_name
@@ -149,7 +147,7 @@ def write_list_file(file_name, content, folder_name, folder_path):
     
     count_dict = every_rule_number(content)
 
-    # Prepare content with header comments
+    # 添加标题注释
     formatted_content = [
         f"# 规则名称: {rule_name}",
         f"# 规则总数量: {rule_count}",
@@ -164,16 +162,16 @@ def write_list_file(file_name, content, folder_name, folder_path):
     try:
         with open(list_file_path, 'w', encoding='utf-8') as list_file:
             list_file.write("\n".join(formatted_content))
-        logging.info(f"List file saved: {list_file_path}")
+        logging.info(f".list 文件保存成功: {list_file_path}")
     except IOError as e:
-        logging.error(f"Failed to write list file {list_file_path}: {e}")
+        logging.error(f".list 文件保存失败 {list_file_path}: {e}")
 
 # 处理yaml文件
 def write_yaml_file(file_name, content, folder_name, folder_path):
     """
-    Write content to a YAML file in payload format.
-    :param file_name: str, name of the .list file
-    :param content: list, sorted content
+    将内容写入 yaml 文件，并添加 payload 格式
+    :param file_name: 文件名称
+    :param content: 内容列表
     改写成yaml文件
     """
     folder_name = folder_path + folder_name
@@ -187,7 +185,7 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
     
     count_dict = every_rule_number(content)
 
-    # Prepare content with payload format
+    # 添加 payload 格式
     formatted_content = [
         f"# 规则名称: {rule_name}",
         f"# 规则总数量: {rule_count}",
@@ -203,9 +201,9 @@ def write_yaml_file(file_name, content, folder_name, folder_path):
     try:
         with open(yaml_file_path, 'w', encoding='utf-8') as yaml_file:
             yaml_file.write("\n".join(formatted_content))
-        logging.info(f"YAML file saved: {yaml_file_path}")
+        logging.info(f".yaml 文件保存成功: {yaml_file_path}")
     except IOError as e:
-        logging.error(f"Failed to write YAML file {yaml_file_path}: {e}")
+        logging.error(f".yaml 文件保存失败 {yaml_file_path}: {e}")
 
 # 批量处理每一行数据
 def process_file(file_name, urls, folder_name, folder_path):
@@ -218,16 +216,13 @@ def process_file(file_name, urls, folder_name, folder_path):
         if content is not None:
             file_contents.append(content)
     
-    # Merge contents
-    # 去除文本中带#的内容 并且 合并重复内容
+    # 合并内容
     merged_content = merge_file_contents(file_contents)
 
-    # Sort rules
-    # 根据预定顺序 进行排序
+    # 排序规则
     sorted_content = sort_rules(merged_content)
 
-    # Write .list and .yaml files
-    # 分别改写成 .list文件 和 .yaml文件
+    # 写入 .list 和 .yaml文件
     write_list_file(file_name, sorted_content, folder_name ,folder_path)
     write_yaml_file(file_name, sorted_content, folder_name, folder_path)    
 
@@ -270,9 +265,9 @@ def total_md_file(folder_path, rule_list_data ,width=5):
     try:
         with open(md_file_path, "w", encoding="utf-8") as md_file:
             md_file.write(md_content)
-            logging.info(f"md file saved: {md_file_path}")
+            logging.info(f"MD 文件保存成功: {md_file_path}")
     except IOError as e:
-        logging.error(f"Failed to write md file {md_file_path}: {e}")
+        logging.error(f"MD 文件保存失败 {md_file_path}: {e}")
 
 if __name__ == "__main__":
 
