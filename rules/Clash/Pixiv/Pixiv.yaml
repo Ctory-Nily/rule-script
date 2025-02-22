@@ -1,11 +1,13 @@
 # 规则名称: Pixiv
 # 规则总数量: 8
+# 同步时间: 2025年02月23日 01:09
 # DOMAIN: 8
 # DOMAIN-SUFFIX: 8
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
+
 
 payload:
   - DOMAIN-SUFFIX,booth.pm

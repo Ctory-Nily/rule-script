@@ -1,11 +1,13 @@
 # 规则名称: Google
 # 规则总数量: 733
+# 同步时间: 2025年02月23日 01:09
 # DOMAIN: 722
 # DOMAIN-SUFFIX: 716
 # DOMAIN-KEYWORD: 5
 # IP-CIDR: 5
 # IP-CIDR6: 1
 # IP-SUFFIX: 0
+
 
 payload:
   - DOMAIN,voice.telephony.goog

@@ -1,11 +1,13 @@
 # 规则名称: Netflix
 # 规则总数量: 1157
+# 同步时间: 2025年02月23日 01:09
 # DOMAIN: 37
 # DOMAIN-SUFFIX: 30
 # DOMAIN-KEYWORD: 4
 # IP-CIDR: 1119
 # IP-CIDR6: 4
 # IP-SUFFIX: 0
+
 
 payload:
   - DOMAIN,e13252.dscg.akamaiedge.net

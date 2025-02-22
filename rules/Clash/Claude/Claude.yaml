@@ -1,11 +1,13 @@
 # 规则名称: Claude
 # 规则总数量: 3
+# 同步时间: 2025年02月23日 01:09
 # DOMAIN: 3
 # DOMAIN-SUFFIX: 2
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
+
 
 payload:
   - DOMAIN,cdn.usefathom.com

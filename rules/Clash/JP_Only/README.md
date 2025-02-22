@@ -4,15 +4,17 @@
 本文件由脚本自动生成
 
 ## 规则统计
+最后同步时间: 2025年02月23日 01:09
+
+各类型规则统计:
 | 类型 | 数量(条)  | 
 | ---- | ----  |
-| DOMAIN | 1  | 
-| DOMAIN-SUFFIX | 1  | 
-| DOMAIN-KEYWORD | 0  | 
-| IP-CIDR | 0  | 
-| IP-CIDR6 | 0  | 
-| IP-SUFFIX | 0  | 
-| TOTAL | 1  | 
-
-## 获取连接
-- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/JP_Only.list 
+| DOMAIN | 1 | 
+| DOMAIN-SUFFIX | 1 | 
+| DOMAIN-KEYWORD | 0 | 
+| IP-CIDR | 0 | 
+| IP-CIDR6 | 0 | 
+| IP-SUFFIX | 0 | 
+| TOTAL | 1 | 
+## Clash### 使用说明JP_Only.yaml, 请使用 behavior: 'classical' 
+### 规则链接- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/JP_Only.list 
