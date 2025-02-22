@@ -1,5 +1,8 @@
 import os
 import logging
+from typing import List, Dict, Optional
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 # 配置日志记录
 logging.basicConfig(
@@ -17,6 +20,34 @@ RULE_ORDER = [
     "IP-SUFFIX",
 ]
 
+def get_time() -> Optional[str]:
+    """
+    获取工作流执行时的时间段
+    :return: 当前时间
+    """
+    Beijing_Time = ZoneInfo('Asia/Shanghai')
+    now_time = datetime.now(Beijing_Time)
+
+    # 将时间格式化为 "年月日时分" 的格式
+    format_time = now_time.strftime("%Y年%m月%d日 %H:%M")
+
+    return format_time
+
+def calculate_rule_number(content: List[str]) -> Dict[str, int]:
+    """
+    单独统计各个规则的数量
+    :param content: 内容列表
+    :return: 统计后的数据字典
+    """
+    rule_number_dict = { keyword: 0 for keyword in RULE_ORDER }
+
+    # 遍历数据并统计
+    for line in content:
+        for keyword in RULE_ORDER:
+            if line.startswith(keyword):
+                rule_number_dict[keyword] += 1
+    
+    return rule_number_dict
 
 def is_list_file(file_path: str) -> bool:
     """
@@ -31,7 +62,6 @@ def is_list_file(file_path: str) -> bool:
     except Exception as e:
         logging.error(f"检查文件格式失败: {file_path} - {e}")
         return False
-
 
 def count_rule_lines(file_path: str, rulename: str) -> None:
     """
@@ -52,9 +82,6 @@ def count_rule_lines(file_path: str, rulename: str) -> None:
             logging.info(f"文件 {file_path} 中没有有效内容。")
             return
 
-        rule_counts = {prefix: 0 for prefix in RULE_ORDER}
-        total_rules = 0
-
         # 使用集合去重
         unique_rules = set()
         sorted_rules = {prefix: [] for prefix in RULE_ORDER}
@@ -72,9 +99,7 @@ def count_rule_lines(file_path: str, rulename: str) -> None:
             if rule_type in RULE_ORDER:
                 if line not in unique_rules:
                     unique_rules.add(line)
-                    rule_counts[rule_type] += 1
                     sorted_rules[rule_type].append(line)
-                    total_rules += 1
                 else:
                     logging.debug(f"重复规则被忽略: {line}")
 
@@ -84,10 +109,18 @@ def count_rule_lines(file_path: str, rulename: str) -> None:
             sorted_rules[prefix].sort()
             sorted_lines.extend(sorted_rules[prefix])
 
+        rule_number_dict = calculate_rule_number(sorted_lines)
+        total_rules = len(sorted_lines)
+
+        # 获取当前时间
+        now_time = get_time()
+
         # 生成注释信息
         comment = f"# 规则名称: {rulename} \n"
-        comment += f"# 规则数量: {total_rules} \n"
-        for prefix, count in rule_counts.items():
+        comment += f"# 规则总数量: {total_rules} \n"
+        comment += f"# 更新时间: {now_time} \n"
+
+        for prefix, count in rule_number_dict.items():
             comment += f"# {prefix}: {count} \n"
         sorted_lines.insert(0, comment)
 
@@ -105,7 +138,6 @@ def count_rule_lines(file_path: str, rulename: str) -> None:
     except Exception as e:
         logging.error(f"处理规则文件失败: {file_path} - {e}")
 
-
 def process_rule_folder(folder_path: str) -> None:
     """
     处理指定文件夹中的所有规则文件。
@@ -121,7 +153,9 @@ def process_rule_folder(folder_path: str) -> None:
     except Exception as e:
         logging.error(f"处理文件夹失败: {folder_path} - {e}")
 
-
 if __name__ == "__main__":
-    folder_path = "user_rule"
+
+    # 自定义 user_rule 文件夹路径
+    folder_path = 'user_rule'
+
     process_rule_folder(folder_path)

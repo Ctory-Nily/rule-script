@@ -1,0 +1,54 @@
+name: Process and Fetch Rule
+
+on:
+  # 当 user_rule 文件夹下有更新时触发
+  push:
+    paths:
+      - 'user_rule/**'
+  # 手动触发
+  workflow_dispatch:
+
+jobs:
+  process_rule:
+    runs-on: ubuntu-latest
+
+    outputs:
+      has_changes: ${{ steps.check-changes.outputs.has_changes }}  # 将 has_changes 作为作业输出
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Check for changes in user_rule directory
+      id: check-changes
+      run: |
+        # 检查 user_rule 目录是否有更改
+        if git diff --quiet HEAD^ HEAD -- user_rule; then
+          echo "No changes in user_rule directory."
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        else
+          echo "Changes detected in user_rule directory."
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Set up Python
+      if: steps.check-changes.outputs.has_changes == 'true'
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    # 运行 process_rule.py 脚本
+    - name: Run Process Rule Python script
+      if: steps.check-changes.outputs.has_changes == 'true'
+      run: |
+        python3 script/process_rule.py
+
+    - name: Commit processed rule changes
+      if: steps.check-changes.outputs.has_changes == 'true'
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Processed rule files with total rules count and sorted rules" || echo "No changes to commit"
+        git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
+        git push origin main
