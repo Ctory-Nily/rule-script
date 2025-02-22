@@ -2,10 +2,11 @@
 本文件由脚本自动生成
 
 ## 规则列表
-最后同步时间: 2025年02月23日 01:48
+处理的规则总计: 34 
 
-各规则统计:
-| 规则 |    |     |     |     |
+最后同步时间: 2025年02月23日 01:55 
+
+| 规则名称 |    |     |     |     |
 |----------|----------|----------|----------|----------|
 | [userDirect](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/userDirect)|[userProxy ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/userProxy )|[userReject](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/userReject)|[JP_Only   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/JP_Only   )|[Emby      ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Emby      ) |
 | [Google    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Google    )|[GoogleDrive](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GoogleDrive)|[GoogleSearch](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GoogleSearch)|[Microsoft ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Microsoft )|[YouTube   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/YouTube   ) |
