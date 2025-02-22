@@ -309,9 +309,8 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     # 生成表格
     table = []
     for row in rows:
-        table.append("|".join(f"{cell:<10}" for cell in row))  # 每个单元格宽度为 10
-        logging.info(row)
-    # row_str = "|" + "|".join(f"[{row}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{row})") + "|"  # 将数据拼接为表格行
+        table.append("|")
+        table.append("|".join(f"[{cell:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{cell:<10})" for cell in row))  # 每个单元格宽度为 10
 
     # 合并
     for line in table:
