@@ -233,7 +233,8 @@ def write_yaml_file(file_name: str, content: List[str], folder_name: str, folder
     # 合并数组
     formatted_content.append("\n")
     formatted_content.append("payload:")
-    formatted_content.append(f"  - {line}" for line in content)
+    for line in content:
+        formatted_content.append(f"  - {line}")
 
     try:
         with open(yaml_file_path, 'w', encoding='utf-8') as yaml_file:
