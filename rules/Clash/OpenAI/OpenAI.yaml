@@ -1,12 +1,13 @@
 # 规则名称: OpenAI
 # 规则总数量: 37
-# 同步时间: 2025年02月23日 02:11
+# 同步时间: 2025年02月23日 02:22
 # DOMAIN: 34
 # DOMAIN-SUFFIX: 25
 # DOMAIN-KEYWORD: 1
 # IP-CIDR: 2
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
+
 payload:
   - DOMAIN,browser-intake-datadoghq.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
