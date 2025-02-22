@@ -2,15 +2,15 @@
 本文件由脚本自动生成
 
 ## 规则列表
-最后同步时间: 2025年02月23日 01:41
+最后同步时间: 2025年02月23日 01:48
 
 各规则统计:
 | 规则 |    |     |     |     |
 |----------|----------|----------|----------|----------|
-| [userDirect|userProxy |userReject|JP_Only   |Emby      ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/userDirect|userProxy |userReject|JP_Only   |Emby      ) |
-| [Google    |GoogleDrive|GoogleSearch|Microsoft |YouTube   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Google    |GoogleDrive|GoogleSearch|Microsoft |YouTube   ) |
-| [YouTubeMusic|Telegram  |Netflix   |PayPal    |Bahamut   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/YouTubeMusic|Telegram  |Netflix   |PayPal    |Bahamut   ) |
-| [Niconico  |BiliBili  |Instagram |Pixiv     |GoogleVoice](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Niconico  |BiliBili  |Instagram |Pixiv     |GoogleVoice) |
-| [Line      |TikTok    |Twitter   |OpenAI    |GitHub    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Line      |TikTok    |Twitter   |OpenAI    |GitHub    ) |
-| [Claude    |Discord   |Epic      |Talkatone |Steam_CN  ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Claude    |Discord   |Epic      |Talkatone |Steam_CN  ) |
-| [Steam     |DownloadCDN_CN|DownloadCDN|EHGallery |          ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Steam     |DownloadCDN_CN|DownloadCDN|EHGallery |          ) |
+| [userDirect](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/userDirect)|[userProxy ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/userProxy )|[userReject](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/userReject)|[JP_Only   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/JP_Only   )|[Emby      ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Emby      ) |
+| [Google    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Google    )|[GoogleDrive](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GoogleDrive)|[GoogleSearch](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GoogleSearch)|[Microsoft ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Microsoft )|[YouTube   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/YouTube   ) |
+| [YouTubeMusic](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/YouTubeMusic)|[Telegram  ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Telegram  )|[Netflix   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Netflix   )|[PayPal    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/PayPal    )|[Bahamut   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Bahamut   ) |
+| [Niconico  ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Niconico  )|[BiliBili  ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/BiliBili  )|[Instagram ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Instagram )|[Pixiv     ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Pixiv     )|[GoogleVoice](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GoogleVoice) |
+| [Line      ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Line      )|[TikTok    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/TikTok    )|[Twitter   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Twitter   )|[OpenAI    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/OpenAI    )|[GitHub    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GitHub    ) |
+| [Claude    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Claude    )|[Discord   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Discord   )|[Epic      ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Epic      )|[Talkatone ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Talkatone )|[Steam_CN  ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Steam_CN  ) |
+| [Steam     ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Steam     )|[DownloadCDN_CN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/DownloadCDN_CN)|[DownloadCDN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/DownloadCDN)|[EHGallery ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/EHGallery )|[          ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/          ) |
