@@ -1,14 +1,12 @@
 # 规则名称: Bahamut
 # 规则总数量: 9
-# 同步时间: 2025年02月23日 02:04
+# 同步时间: 2025年02月23日 02:11
 # DOMAIN: 9
 # DOMAIN-SUFFIX: 6
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
-
-
 DOMAIN,bahamut.akamaized.net
 DOMAIN,gamer-cds.cdn.hinet.net
 DOMAIN,gamer2-cds.cdn.hinet.net

@@ -1,14 +1,12 @@
 # 规则名称: Twitter
 # 规则总数量: 32
-# 同步时间: 2025年02月23日 02:04
+# 同步时间: 2025年02月23日 02:11
 # DOMAIN: 26
 # DOMAIN-SUFFIX: 25
 # DOMAIN-KEYWORD: 1
 # IP-CIDR: 6
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
-
-
 payload:
   - DOMAIN-SUFFIX,ads-twitter.com
   - DOMAIN-SUFFIX,cms-twdigitalassets.com

@@ -1,14 +1,12 @@
 # 规则名称: DownloadCDN_CN
 # 规则总数量: 18
-# 同步时间: 2025年02月23日 02:04
+# 同步时间: 2025年02月23日 02:12
 # DOMAIN: 18
 # DOMAIN-SUFFIX: 1
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
-
-
 DOMAIN,alibaba.cdn.steampipe.steamcontent.com
 DOMAIN,assets1.xboxlive.cn
 DOMAIN,assets2.xboxlive.cn

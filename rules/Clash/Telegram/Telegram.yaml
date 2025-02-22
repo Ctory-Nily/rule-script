@@ -1,14 +1,12 @@
 # 规则名称: Telegram
 # 规则总数量: 62
-# 同步时间: 2025年02月23日 02:04
+# 同步时间: 2025年02月23日 02:11
 # DOMAIN: 32
 # DOMAIN-SUFFIX: 26
 # DOMAIN-KEYWORD: 2
 # IP-CIDR: 19
 # IP-CIDR6: 7
 # IP-SUFFIX: 0
-
-
 payload:
   - DOMAIN,api.imem.app
   - DOMAIN,api.mixpanel.com

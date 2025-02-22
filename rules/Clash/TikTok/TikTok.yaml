@@ -1,14 +1,12 @@
 # 规则名称: TikTok
 # 规则总数量: 103
-# 同步时间: 2025年02月23日 02:04
+# 同步时间: 2025年02月23日 02:11
 # DOMAIN: 102
 # DOMAIN-SUFFIX: 56
 # DOMAIN-KEYWORD: 9
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
-
-
 payload:
   - DOMAIN,api.snapkit.com
   - DOMAIN,cocacola.co.jp

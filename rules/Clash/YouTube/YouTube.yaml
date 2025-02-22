@@ -1,14 +1,12 @@
 # 规则名称: YouTube
 # 规则总数量: 185
-# 同步时间: 2025年02月23日 02:04
+# 同步时间: 2025年02月23日 02:11
 # DOMAIN: 182
 # DOMAIN-SUFFIX: 179
 # DOMAIN-KEYWORD: 1
 # IP-CIDR: 3
 # IP-CIDR6: 1
 # IP-SUFFIX: 0
-
-
 payload:
   - DOMAIN,youtubei.googleapis.com
   - DOMAIN,yt3.ggpht.com

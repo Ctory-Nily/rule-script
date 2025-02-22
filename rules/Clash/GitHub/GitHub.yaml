@@ -1,14 +1,12 @@
 # 规则名称: GitHub
 # 规则总数量: 30
-# 同步时间: 2025年02月23日 02:04
+# 同步时间: 2025年02月23日 02:12
 # DOMAIN: 30
 # DOMAIN-SUFFIX: 29
 # DOMAIN-KEYWORD: 1
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
-
-
 payload:
   - DOMAIN-SUFFIX,atom.io
   - DOMAIN-SUFFIX,dependabot.com
