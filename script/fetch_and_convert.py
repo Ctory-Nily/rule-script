@@ -333,8 +333,15 @@ if __name__ == "__main__":
     json_file_path = os.path.join(os.path.dirname(__file__), 'rule_file_list.json')
 
     # 读取 rule_file_list.json 文件
-    with open(json_file_path, "r", encoding="utf-8") as json_file:
-        rule_list_data = json.load(json_file)
+    try:
+        with open(json_file_path, "r", encoding="utf-8") as json_file:
+            rule_list_data = json.load(json_file)
+    except FileNotFoundError:
+        logging.error(f"文件未找到: {json_file_path}")
+        exit(1)
+    except json.JSONDecodeError:
+        logging.error(f"JSON 文件格式错误: {json_file_path}")
+        exit(1)
 
     # 批量处理
     for item in rule_list_data:
