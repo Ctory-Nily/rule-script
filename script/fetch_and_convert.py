@@ -347,6 +347,6 @@ if __name__ == "__main__":
     for item in rule_list_data:
         process_file(item["file_name"], item["file_urls"], item["folder_name"], folder_path)
     
-    # 生成总的MD文件
+    # 生成总的 .md文件
     write_total_md_file(folder_path, rule_list_data)
 
