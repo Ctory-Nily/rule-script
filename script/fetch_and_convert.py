@@ -108,6 +108,10 @@ def write_md_file(urls: List[str], content: List[str], folder_name: str, folder_
     :param folder_name: 文件夹名称
     :param folder_path: 生成路径
     """
+    os.makedirs(folder_path, exist_ok=True)
+
+    md_file_path = os.path.join(folder_path, f"README.md")
+
     # 规则总数
     rule_count = len(content)   
 
@@ -143,10 +147,6 @@ def write_md_file(urls: List[str], content: List[str], folder_name: str, folder_
     for url in urls:
         md_content += f"- {url} \n"
 
-    folder_path = folder_path + folder_name
-    os.makedirs(folder_path, exist_ok=True)
-
-    md_file_path = os.path.join(folder_path, f"README.md")
     try:
         with open(md_file_path, "w", encoding="utf-8") as md_file:
             md_file.write(md_content)
@@ -162,7 +162,6 @@ def write_list_file(file_name: str, content: List[str], folder_name: str, folder
     :param folder_name: 文件夹名称
     :param folder_path: 生成路径
     """
-    folder_path = folder_path + folder_name
     os.makedirs(folder_path, exist_ok=True)
 
     list_file_path = os.path.join(folder_path, file_name)
@@ -205,7 +204,6 @@ def write_yaml_file(file_name: str, content: List[str], folder_name: str, folder
     :param folder_name: 文件夹名称
     :param folder_path: 生成路径
     """
-    folder_path = folder_path + folder_name
     os.makedirs(folder_path, exist_ok=True)
 
     yaml_file_path = os.path.join(folder_path, f"{os.path.splitext(file_name)[0]}.yaml")
@@ -262,12 +260,15 @@ def process_file(file_name: str, urls: List[str], folder_name: str, folder_path:
     # 排序规则
     sorted_content = sort_rules(merged_content)
 
-    # 写入 .list 和 .yaml文件
-    write_list_file(file_name, sorted_content, folder_name ,folder_path)
-    write_yaml_file(file_name, sorted_content, folder_name, folder_path)    
+    # 在 rules/Clash 目录下创建同名文件夹
+    rule_folder_path = os.path.join(folder_path, folder_name)
 
-    # 生成 .md文件
-    write_md_file(urls, sorted_content, folder_name, folder_path)
+    # 写入 .list 和 .yaml文件
+    write_list_file(file_name, sorted_content, folder_name, rule_folder_path)
+    write_yaml_file(file_name, sorted_content, folder_name, rule_folder_path)    
+
+    # 写入 .md文件
+    write_md_file(urls, sorted_content, folder_name, rule_folder_path)
 
 def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     """
