@@ -1,10 +1,13 @@
 name: Process and Fetch Rules
 
 on:
+  # 原始触发条件：当 user_rule 文件夹下有更新时触发
   push:
     paths:
       - 'user_rule/**'
+  # 手动触发
   workflow_dispatch:
+  # 当 Process JSON URLs 工作流成功完成后触发
   workflow_run:
     workflows: ["Process JSON URLs"]
     types:
@@ -14,26 +17,27 @@ jobs:
   process_rule:
     runs-on: ubuntu-latest
 
+    # 仅在以下条件满足时运行：
+    # 1. 原始触发条件满足（user_rule/ 目录有变化）
+    # 2. 手动触发
+    # 3. Process JSON URLs 工作流完成，并且 user_rule/ 目录有变化
     if: |
-      (github.event_name == 'push' && contains(github.event.commit.modified, 'user_rule/')) ||
-      (github.event_name == 'workflow_dispatch') ||
-      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && contains(github.event.commit.modified, 'user_rule/'))
+      github.event_name == 'push' && contains(github.event.commit.modified, 'user_rule/') ||
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
     
     outputs:
-      has_changes: ${{ steps.check-changes.outputs.has_changes }}
+      has_changes: ${{ steps.check-changes.outputs.has_changes }}  # 将 has_changes 作为作业输出
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Debug modified files
-      run: |
-        echo "Modified files: ${{ github.event.commit.modified }}"
-
     - name: Check for changes in user_rule directory
       id: check-changes
       run: |
-        if [ -z "$(git diff --name-only HEAD^ HEAD -- user_rule)" ]; then
+        # 检查 user_rule 目录是否有更改
+        if git diff --quiet HEAD^ HEAD -- user_rule; then
           echo "No changes in user_rule directory."
           echo "has_changes=false" >> $GITHUB_OUTPUT
         else
@@ -47,6 +51,7 @@ jobs:
       with:
         python-version: '3.9'
 
+    # 运行 process_rule.py 脚本
     - name: Run Process Rule Python script
       if: steps.check-changes.outputs.has_changes == 'true'
       run: |
