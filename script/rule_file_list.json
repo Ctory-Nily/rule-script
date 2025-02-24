@@ -1,226 +1,226 @@
 [
-        {
-            "rule_name":"userDirect", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/userDirect.list"
-                ]
-        },
-        {
-            "rule_name":"userProxy", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userProxy.list"
-                ]
-        },
-        {
-            "rule_name":"userReject", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userReject.list"
-                ]
-        },
-        {
-            "rule_name":"JP_Only", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/JP_Only.list"
-                ]
-        },
-        {
-            "rule_name":"Emby", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Emby.list",
-                "https://raw.githubusercontent.com/kirito12827/kk_zawuku/refs/heads/clash/user_rule/emby.list"
-                ]
-        },
-        {
-            "rule_name":"Google", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Google.list"
-                ]
-        },
-        {
-            "rule_name":"GoogleDrive", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.list"
-                ]
-        },
-        {
-            "rule_name":"GoogleSearch", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleSearch/GoogleSearch.list"
-                ]
-        },
-        {
-            "rule_name":"Microsoft", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Microsoft.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list"
-                ]
-        },
-        {
-            "rule_name":"YouTube", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/YouTube.list"
-                ]
-        },
-        {
-            "rule_name":"YouTubeMusic", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.list"
-                ]
-        },
-        {
-            "rule_name":"Telegram", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Telegram.list"
-                ]
-        },
-        {
-            "rule_name":"Netflix", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Netflix.list"
-                ]
-        },
-        {
-            "rule_name":"PayPal", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/PayPal.list"
-                ]
-        },
-        {
-            "rule_name":"Bahamut", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Bahamut.list"
-                ]
-        },
-        {
-            "rule_name":"Niconico", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Niconico/Niconico.list"
-                ]
-        },
-        {
-            "rule_name":"BiliBili", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Bilibili.list"
-                ]
-        },
-        {
-            "rule_name":"Instagram", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Instagram.list"
-                ]
-        },
-        {
-            "rule_name":"Pixiv", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Pixiv/Pixiv.list"
-                ]
-        },
-        {
-            "rule_name":"GoogleVoice", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleVoice/GoogleVoice.list"
-                ]
-        },
-        {
-            "rule_name":"Line", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Line/Line.list"
-                ]
-        },
-        {
-            "rule_name":"TikTok", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/TikTok.list"
-                ]
-        },
-        {
-            "rule_name":"Twitter", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Twitter.list"
-                ]
-        },
-        {
-            "rule_name":"OpenAI", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/OpenAI.list"
-                ]
-        },
-        {
-            "rule_name":"GitHub", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Github.list"
-                ]
-        },
-        {
-            "rule_name":"Claude", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Claude.list"
-                ]
-        },
-        {
-            "rule_name":"Discord", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Discord/Discord.list"
-                ]
-        },
-        {
-            "rule_name":"Epic", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Epic.list"
-                ]
-        },
-        {
-            "rule_name":"Talkatone", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Talkatone.list"
-                ]
-        },
-        {
-            "rule_name":"Steam_CN", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/user_rule/steam_CN.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list"
-                ]
-        },
-        {
-            "rule_name":"Steam", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Steam.list"
-                ]
-        },
-        {
-            "rule_name":"DownloadCDN_CN", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/DownloadCDN_CN.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.list"
-                ]
-        },
-        {
-            "rule_name":"DownloadCDN", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.list",
-                "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/DownloadCDN_Global.list"
-                ]
-        },
-        {
-            "rule_name":"EH_Hentai", 
-            "rules_urls": [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EHGallery/EHGallery.list"
-                ]
-        }
-   ]
+  {
+    "rule_name": "userDirect",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userDirect.list"
+    ]
+  },
+  {
+    "rule_name": "userProxy",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userProxy.list"
+    ]
+  },
+  {
+    "rule_name": "userReject",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userReject.list"
+    ]
+  },
+  {
+    "rule_name": "JP_Only",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/JP_Only.list"
+    ]
+  },
+  {
+    "rule_name": "Emby",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Emby.list",
+      "https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/user_rule/emby.list"
+    ]
+  },
+  {
+    "rule_name": "Google",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Google.list"
+    ]
+  },
+  {
+    "rule_name": "GoogleDrive",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.list"
+    ]
+  },
+  {
+    "rule_name": "GoogleSearch",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleSearch/GoogleSearch.list"
+    ]
+  },
+  {
+    "rule_name": "Microsoft",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Microsoft.list",
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list"
+    ]
+  },
+  {
+    "rule_name": "YouTube",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/YouTube.list"
+    ]
+  },
+  {
+    "rule_name": "YouTubeMusic",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.list"
+    ]
+  },
+  {
+    "rule_name": "Telegram",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Telegram.list"
+    ]
+  },
+  {
+    "rule_name": "Netflix",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Netflix.list"
+    ]
+  },
+  {
+    "rule_name": "PayPal",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/PayPal.list"
+    ]
+  },
+  {
+    "rule_name": "Bahamut",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Bahamut.list"
+    ]
+  },
+  {
+    "rule_name": "Niconico",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Niconico/Niconico.list"
+    ]
+  },
+  {
+    "rule_name": "BiliBili",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Bilibili.list"
+    ]
+  },
+  {
+    "rule_name": "Instagram",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Instagram.list"
+    ]
+  },
+  {
+    "rule_name": "Pixiv",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.list"
+    ]
+  },
+  {
+    "rule_name": "GoogleVoice",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleVoice/GoogleVoice.list"
+    ]
+  },
+  {
+    "rule_name": "Line",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Line/Line.list"
+    ]
+  },
+  {
+    "rule_name": "TikTok",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/TikTok.list"
+    ]
+  },
+  {
+    "rule_name": "Twitter",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Twitter.list"
+    ]
+  },
+  {
+    "rule_name": "OpenAI",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/OpenAI.list"
+    ]
+  },
+  {
+    "rule_name": "GitHub",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Github.list"
+    ]
+  },
+  {
+    "rule_name": "Claude",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Claude.list"
+    ]
+  },
+  {
+    "rule_name": "Discord",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.list"
+    ]
+  },
+  {
+    "rule_name": "Epic",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Epic.list"
+    ]
+  },
+  {
+    "rule_name": "Talkatone",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Talkatone.list"
+    ]
+  },
+  {
+    "rule_name": "Steam_CN",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/user_rule/steam_CN.list",
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list"
+    ]
+  },
+  {
+    "rule_name": "Steam",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Steam.list"
+    ]
+  },
+  {
+    "rule_name": "DownloadCDN_CN",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/DownloadCDN_CN.list",
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.list"
+    ]
+  },
+  {
+    "rule_name": "DownloadCDN",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/DownloadCDN_Global.list"
+    ]
+  },
+  {
+    "rule_name": "EH_Hentai",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EHGallery/EHGallery.list"
+    ]
+  }
+]
