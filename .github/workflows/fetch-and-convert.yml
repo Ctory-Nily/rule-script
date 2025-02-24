@@ -30,6 +30,9 @@ jobs:
         workflow_1_status=$(gh run list --workflow="Process JSON URLs" --limit 1 --json conclusion -q '.[0].conclusion')
         workflow_2_status=$(gh run list --workflow="Process and Fetch Rules" --limit 1 --json conclusion -q '.[0].conclusion')
 
+        echo "Workflow 1 status: $workflow_1_status"
+        echo "Workflow 2 status: $workflow_2_status"
+
         if [[ "$workflow_1_status" != "success" || "$workflow_2_status" != "success" ]]; then
           echo "One of the workflows did not complete successfully. Exiting..."
           exit 1
