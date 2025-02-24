@@ -100,12 +100,12 @@ def sort_rules(rules: List[str]) -> List[str]:
 
     return sorted(rules, key=rule_key)
 
-def write_md_file(urls: List[str], content: List[str], folder_name: str, folder_path: str) -> None:
+def write_md_file(urls: List[str], rule_name: str, content: List[str], folder_path: str) -> None:
     """
     在每个文件夹下生成 .md 说明文件
     :param urls: 文件的 URL 列表
+    :param rule_name: 规则名称
     :param content: 内容列表
-    :param folder_name: 文件夹名称
     :param folder_path: 生成路径
     """
     os.makedirs(folder_path, exist_ok=True)
@@ -122,7 +122,7 @@ def write_md_file(urls: List[str], content: List[str], folder_name: str, folder_
     now_time = get_time()
 
     # 创建 Markdown 文件内容
-    md_content = f"""# {folder_name}
+    md_content = f"""# {rule_name}
 
 ## 前言
 本文件由脚本自动生成
@@ -141,7 +141,7 @@ def write_md_file(urls: List[str], content: List[str], folder_name: str, folder_
 
     md_content += f"## Clash \n"
     md_content += f"### 使用说明 \n"
-    md_content += f"{folder_name}.yaml, 请使用 behavior: 'classical' \n"
+    md_content += f"{rule_name}.yaml, 请使用 behavior: 'classical' \n"
 
     md_content += f"### 规则链接 \n"
     for url in urls:
@@ -154,21 +154,19 @@ def write_md_file(urls: List[str], content: List[str], folder_name: str, folder_
     except IOError as e:
         logging.error(f".md 文件保存失败 {md_file_path} - {e}")
 
-def write_list_file(file_name: str, content: List[str], folder_name: str, folder_path: str) -> None:
+def write_list_file(rule_name: str, content: List[str], folder_path: str) -> None:
     """
     将内容写进 .list 文件，并添加标题注释
-    :param file_name: 文件名称
+    :param rule_name: 规则名称
     :param content: 内容列表
-    :param folder_name: 文件夹名称
     :param folder_path: 生成路径
     """
     os.makedirs(folder_path, exist_ok=True)
 
-    list_file_path = os.path.join(folder_path, file_name)
+    list_file_path = os.path.join(folder_path, f"{rule_name}.list")
 
     # 规则总数
     rule_count = len(content)
-    rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
     
     rule_number_dict = calculate_rule_number(content)
 
@@ -196,21 +194,19 @@ def write_list_file(file_name: str, content: List[str], folder_name: str, folder
     except IOError as e:
         logging.error(f".list 文件保存失败 {list_file_path} - {e}")
 
-def write_yaml_file(file_name: str, content: List[str], folder_name: str, folder_path: str) -> None:
+def write_yaml_file(rule_name: str, content: List[str], folder_path: str) -> None:
     """
     将内容写入 yaml 文件，并添加 payload 格式
-    :param file_name: 文件名称
+    :param rule_name: 规则名称
     :param content: 内容列表
-    :param folder_name: 文件夹名称
     :param folder_path: 生成路径
     """
     os.makedirs(folder_path, exist_ok=True)
 
-    yaml_file_path = os.path.join(folder_path, f"{os.path.splitext(file_name)[0]}.yaml")
+    yaml_file_path = os.path.join(folder_path, f"{rule_name}.yaml")
 
     # 规则总数
     rule_count = len(content)
-    rule_name = os.path.splitext(file_name)[0]  # 去掉后缀
     
     rule_number_dict = calculate_rule_number(content)
 
@@ -240,12 +236,11 @@ def write_yaml_file(file_name: str, content: List[str], folder_name: str, folder
     except IOError as e:
         logging.error(f".yaml 文件保存失败 {yaml_file_path} - {e}")
 
-def process_file(file_name: str, urls: List[str], folder_name: str, folder_path: str) -> None:
+def process_file(rule_name: str, urls: List[str], folder_path: str) -> None:
     """
     下载文件、合并内容、排序规则并生成 .list 和 .yaml 文件。
-    :param file_name: 文件名
+    :param rule_name: 规则名称
     :param urls: 文件的 URL 列表
-    :param folder_name: 文件夹名称
     :param folder_path: 生成路径
     """
     file_contents = []
@@ -261,14 +256,14 @@ def process_file(file_name: str, urls: List[str], folder_name: str, folder_path:
     sorted_content = sort_rules(merged_content)
 
     # 在 rules/Clash 目录下创建同名文件夹
-    rule_folder_path = os.path.join(folder_path, folder_name)
+    rule_folder_path = os.path.join(folder_path, rule_name)
 
     # 写入 .list 和 .yaml文件
-    write_list_file(file_name, sorted_content, folder_name, rule_folder_path)
-    write_yaml_file(file_name, sorted_content, folder_name, rule_folder_path)    
+    write_list_file(rule_name, sorted_content, rule_folder_path)
+    write_yaml_file(rule_name, sorted_content, rule_folder_path)    
 
     # 写入 .md文件
-    write_md_file(urls, sorted_content, folder_name, rule_folder_path)
+    write_md_file(urls, rule_name, sorted_content, rule_folder_path)
 
 def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     """
@@ -295,11 +290,11 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
 
 最后同步时间: {now_time} \n
 """
-    folder_names = [item["folder_name"] for item in rule_list_data]
+    rule_names = [item["rule_name"] for item in rule_list_data]
 
     rows = []
-    for i in range(0, len(folder_names), width):
-        row = folder_names[i:i + width]
+    for i in range(0, len(rule_names), width):
+        row = rule_names[i:i + width]
         rows.append(row)
 
     # 填充空的单元格
@@ -346,7 +341,7 @@ if __name__ == "__main__":
 
     # 批量处理
     for item in rule_list_data:
-        process_file(item["file_name"], item["file_urls"], item["folder_name"], folder_path)
+        process_file(item["rule_name"], item["rules_urls"], folder_path)
     
     # 生成总的 .md文件
     write_total_md_file(folder_path, rule_list_data)
