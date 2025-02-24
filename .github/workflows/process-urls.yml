@@ -13,30 +13,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Install jq
-        run: sudo apt-get install -y jq
+    - name: Install jq
+      run: sudo apt-get install -y jq
 
-      - name: Process JSON files
-        run: |
-          # 遍历 script/ 文件夹下的所有 .json 文件
-          for file in script/*.json; do
-            echo "Processing file: $file"
+    - name: Process JSON files
+      run: |
+        # 遍历 script/ 文件夹下的所有 .json 文件
+        for file in script/*.json; do
+          echo "Processing file: $file"
 
-            # 使用 jq 修改 rules_urls 中的 URL
-            jq '.[].rules_urls |= map(gsub("/refs/heads/"; "/"))' "$file" > "$file.tmp"
-            mv "$file.tmp" "$file"
+          # 使用 jq 修改 rules_urls 中的 URL
+          jq '.[].rules_urls |= map(gsub("/refs/heads/"; "/"))' "$file" > "$file.tmp"
+          mv "$file.tmp" "$file"
 
-            echo "Updated file: $file"
-          done
+          echo "Updated file: $file"
+        done
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Automatically remove refs/heads/ from URLs in JSON files"
+    - name: Commit and push changes
+      env:
+        GH_TOKEN: ${{ secrets.PUSH_EVERYDAY }}
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git add .
+        if git diff-index --quiet HEAD; then
+          echo "没有文件更改，跳过提交。"
+        else
+          git commit -m "Automatically remove refs/heads/ from URLs in JSON files"
+          git pull origin main --rebase
           git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
-          git push origin main
+          if git push origin main; then
+            echo "推送成功。"
+          else
+            echo "推送失败，请检查远程分支是否有冲突。"
+            exit 1
+          fi
+        fi

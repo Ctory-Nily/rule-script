@@ -1,11 +1,6 @@
 name: Fetch and Convert Files
 
 on:
-  # 当 Process and Fetch Rules 和 Process JSON URLs 工作流执行完成后触发
-  workflow_run:
-    workflows: ["Process and Fetch Rules","Process JSON URLs"]
-    types:
-      - completed
   # 每天 UTC 时间 20:00 触发（北京时间 04:00）
   schedule:
     - cron: '0 20 * * *'
@@ -42,9 +37,9 @@ jobs:
     if: |
       # 如果是手动触发或定时触发
       github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' ||
-      # 如果 Process JSON URLs 完成，Process and Fetch Rule 未完成
+      # 如果 Process JSON URLs 完成, Process and Fetch Rule 未完成
       (needs.wait-for-process-json-urls.result == 'success' && needs.wait-for-process-and-fetch-rule.result == 'skipped') ||
-      # 如果 Process and Fetch Rule 完成，Process JSON URLs 未完成
+      # 如果 Process and Fetch Rule 完成, Process JSON URLs 未完成
       (needs.wait-for-process-json-urls.result == 'skipped' && needs.wait-for-process-and-fetch-rule.result == 'success') ||
       # 如果两者都完成
       (needs.wait-for-process-json-urls.result == 'success' && needs.wait-for-process-and-fetch-rule.result == 'success')

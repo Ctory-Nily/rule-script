@@ -44,11 +44,24 @@ jobs:
         python3 script/process_rule.py
 
     - name: Commit processed rule changes
+      env:
+        GH_TOKEN: ${{ secrets.PUSH_EVERYDAY }}
       if: steps.check-changes.outputs.has_changes == 'true'
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git add .
-        git commit -m "Processed rule files with total rules count and sorted rules" || echo "No changes to commit"
-        git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
-        git push origin main
+
+        if git diff-index --quiet HEAD; then
+          echo "没有文件更改，跳过提交。"
+        else
+          git commit -m "Processed rule files with total rules count and sorted rules"
+          git pull origin main --rebase
+          git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
+          if git push origin main; then
+            echo "推送成功。"
+          else
+            echo "推送失败，请检查远程分支是否有冲突。"
+            exit 1
+          fi
+        fi
