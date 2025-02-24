@@ -4,7 +4,7 @@
 本文件由脚本自动生成
 
 ## 规则统计
-最后同步时间: 2025年02月24日 04:09
+最后同步时间: 2025年02月24日 11:56
 
 各类型规则统计:
 | 类型 | 数量(条)  | 
@@ -20,4 +20,4 @@
 ### 使用说明 
 GoogleVoice.yaml, 请使用 behavior: 'classical' 
 ### 规则链接 
-- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleVoice/GoogleVoice.list 
+- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleVoice/GoogleVoice.list 

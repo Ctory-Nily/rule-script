@@ -4,7 +4,7 @@
 ## 规则列表
 处理的规则总计: 34 
 
-最后同步时间: 2025年02月24日 04:09 
+最后同步时间: 2025年02月24日 11:56 
 
 | 规则名称 |    |     |     |     |
 |----------|----------|----------|----------|----------|
@@ -14,4 +14,4 @@
 | [Niconico  ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Niconico  )|[BiliBili  ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/BiliBili  )|[Instagram ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Instagram )|[Pixiv     ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Pixiv     )|[GoogleVoice](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GoogleVoice) |
 | [Line      ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Line      )|[TikTok    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/TikTok    )|[Twitter   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Twitter   )|[OpenAI    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/OpenAI    )|[GitHub    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GitHub    ) |
 | [Claude    ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Claude    )|[Discord   ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Discord   )|[Epic      ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Epic      )|[Talkatone ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Talkatone )|[Steam_CN  ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Steam_CN  ) |
-| [Steam     ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Steam     )|[DownloadCDN_CN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/DownloadCDN_CN)|[DownloadCDN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/DownloadCDN)|[EHGallery ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/EHGallery )|[          ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/          ) |
+| [Steam     ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Steam     )|[DownloadCDN_CN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/DownloadCDN_CN)|[DownloadCDN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/DownloadCDN)|[EH_Hentai ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/EH_Hentai )|[          ](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/          ) |
