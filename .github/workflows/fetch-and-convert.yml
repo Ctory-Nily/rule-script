@@ -6,6 +6,11 @@ on:
     workflows: ["Process and Fetch Rule"]
     types:
       - completed
+  # 当 Process JSON URLs 工作流执行完成后触发
+  workflow_run:
+    workflows: ["Process JSON URLs"]
+    types:
+      - completed
   # 每天 UTC 时间 20:00 触发（北京时间 04:00）
   schedule:
     - cron: '0 20 * * *'
