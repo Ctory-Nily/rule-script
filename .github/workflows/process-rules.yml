@@ -22,9 +22,9 @@ jobs:
     # 2. 手动触发
     # 3. Process JSON URLs 工作流完成，并且 user_rule/ 目录有变化
     if: |
-      github.event_name == 'push' && contains(github.event.commit.modified.*.startsWith('user_rule/'), true) ||
+      github.event_name == 'push' && contains(join(github.event.commit.modified, ','), 'user_rule/') ||
       github.event_name == 'workflow_dispatch' ||
-      github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && contains(github.event.workflow_run.head_commit.modified.*.startsWith('user_rule/'), true)
+      github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && contains(join(github.event.workflow_run.head_commit.modified, ','), 'user_rule/')
     
     outputs:
       has_changes: ${{ steps.check-changes.outputs.has_changes }}  # 将 has_changes 作为作业输出
