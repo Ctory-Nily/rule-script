@@ -2,19 +2,19 @@
   {
     "rule_name": "userDirect",
     "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/userDirect.list"
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userDirect.list"
     ]
   },
   {
     "rule_name": "userProxy",
     "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/userProxy.list"
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userProxy.list"
     ]
   },
   {
     "rule_name": "userReject",
     "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/userReject.list"
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userReject.list"
     ]
   },
   {
@@ -26,15 +26,15 @@
   {
     "rule_name": "Emby",
     "rules_urls": [
-      "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Emby.list",
-      "https://raw.githubusercontent.com/kirito12827/kk_zawuku/refs/heads/clash/user_rule/emby.list"
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Emby.list",
+      "https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/user_rule/emby.list"
     ]
   },
   {
     "rule_name": "Google",
     "rules_urls": [
-      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list",
-      "https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Rules/Google.list"
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
+      "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Google.list"
     ]
   },
   {
