@@ -12,34 +12,23 @@ on:
     types:
       - completed
 
+concurrency:
+  group: process-workflows-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   fetch_and_convert:
     runs-on: ubuntu-latest
-    concurrency:
-      group: fetch-and-convert-${{ github.ref }}
-      cancel-in-progress: false
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Ensure both workflows are completed successfully
-      run: |
-        # 确保工作流1和工作流2都已成功完成
-        # 获取工作流1和工作流2的状态信息
-        workflow_1_status=$(gh run list --workflow="Process JSON URLs" --limit 1 --json conclusion -q '.[0].conclusion')
-        workflow_2_status=$(gh run list --workflow="Process and Fetch Rules" --limit 1 --json conclusion -q '.[0].conclusion')
-
-        if [[ "$workflow_1_status" != "success" || "$workflow_2_status" != "success" ]]; then
-          echo "One of the workflows did not complete successfully. Exiting..."
-          exit 1
-        fi
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         python -m pip install pyyaml requests
-
+    
     # 运行 fetch_and_convert.py 脚本
     - name: Run fetch and convert script
       run: |

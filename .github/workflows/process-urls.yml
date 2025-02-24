@@ -8,10 +8,6 @@ on:
   # 手动触发
   workflow_dispatch:
 
-concurrency:
-  group: process-workflows-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   process-urls:
     runs-on: ubuntu-latest
