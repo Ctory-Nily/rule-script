@@ -7,6 +7,10 @@ on:
       - 'user_rule/**'
   # 手动触发
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Process JSON URLs"]
+    types:
+      - completed
 
 concurrency:
   group: process-workflows-${{ github.ref }}
@@ -17,8 +21,8 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      has_changes: ${{ steps.check-changes.outputs.has_changes }}  # 将 has_changes 作为作业输出
-    
+      has_changes: ${{ steps.check-changes.outputs.has_changes }} #将 has_changes 作为作业输出
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
