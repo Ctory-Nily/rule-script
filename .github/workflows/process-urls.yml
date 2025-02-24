@@ -40,7 +40,7 @@ jobs:
         git config --local user.name "GitHub Actions"
         git add .
         if git diff-index --quiet HEAD; then
-          echo "没有文件更改，跳过提交。"
+          echo "没有可替换内容，跳过提交。"
         else
           git commit -m "Automatically remove refs/heads/ from URLs in JSON files"
           git pull origin main --rebase
