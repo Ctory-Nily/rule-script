@@ -1,7 +1,7 @@
 # 规则名称: userDirect
-# 规则总数量: 2
-# 同步时间: 2025年02月24日 22:42
-# DOMAIN: 2
+# 规则总数量: 3
+# 同步时间: 2025年02月24日 23:05
+# DOMAIN: 3
 # DOMAIN-SUFFIX: 0
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
@@ -10,3 +10,4 @@
 
 DOMAIN,keylol.com
 DOMAIN,steamdb.info
+DOMAIN,steamdb.info1
