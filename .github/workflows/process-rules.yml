@@ -19,9 +19,9 @@ jobs:
 
     # 仅在原始触发条件满足时运行
     if: |
-      github.event_name == 'push' && contains(github.event.commit.modified.*.startsWith('user_rule/'), true) ||
-      github.event_name == 'workflow_dispatch' ||
-      github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event_name == 'push' && contains(github.event.commit.modified.*.startsWith('user_rule/'), true)
+      (github.event_name == 'push' && contains(github.event.commit.modified, 'user_rule/')) ||
+      (github.event_name == 'workflow_dispatch') ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event_name == 'push' && contains(github.event.commit.modified, 'user_rule/'))
     
     outputs:
       has_changes: ${{ steps.check-changes.outputs.has_changes }}  # 将 has_changes 作为作业输出
