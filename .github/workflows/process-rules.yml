@@ -1,4 +1,4 @@
-name: Process and Fetch Rule
+name: Process and Fetch Rules
 
 on:
   # 当 user_rule 文件夹下有更新时触发
