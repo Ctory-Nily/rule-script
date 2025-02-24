@@ -8,13 +8,13 @@
   {
     "rule_name": "userProxy",
     "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userProxy.list"
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/userProxy.list"
     ]
   },
   {
     "rule_name": "userReject",
     "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userReject.list"
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/userReject.list"
     ]
   },
   {

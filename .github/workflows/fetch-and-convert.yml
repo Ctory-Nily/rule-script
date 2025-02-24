@@ -5,44 +5,16 @@ on:
   schedule:
     - cron: '0 20 * * *'
   # 手动触发
-  workflow_dispatch: 
+  workflow_dispatch:
+  # 监听工作流1和工作流2的完成事件
+  workflow_run:
+    workflows: ["Process JSON URLs", "Process and Fetch Rules"]
+    types:
+      - completed
 
 jobs:
-  # 监听 Process JSON URLs 的完成
-  wait-for-process-json-urls:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.name == 'Process JSON URLs' && github.event.workflow_run.conclusion == 'success' }}
-    outputs:
-      process_json_urls_completed: ${{ github.event.workflow_run.conclusion == 'success' }}
-    steps:
-      - name: Check if Process JSON URLs completed
-        run: echo "Process JSON URLs completed successfully."
-
-  # 监听 Process and Fetch Rule 的完成
-  wait-for-process-and-fetch-rule:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.name == 'Process and Fetch Rule' && github.event.workflow_run.conclusion == 'success' }}
-    outputs:
-      process_and_fetch_rule_completed: ${{ github.event.workflow_run.conclusion == 'success' }}
-    steps:
-      - name: Check if Process and Fetch Rule completed
-        run: echo "Process and Fetch Rule completed successfully."
-
-  # 主作业，根据条件执行
   fetch_and_convert:
     runs-on: ubuntu-latest
-
-    needs: [wait-for-process-json-urls, wait-for-process-and-fetch-rule]
-
-    if: |
-      # 如果是手动触发或定时触发
-      github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' ||
-      # 如果 Process JSON URLs 完成, Process and Fetch Rule 未完成
-      (needs.wait-for-process-json-urls.result == 'success' && needs.wait-for-process-and-fetch-rule.result == 'skipped') ||
-      # 如果 Process and Fetch Rule 完成, Process JSON URLs 未完成
-      (needs.wait-for-process-json-urls.result == 'skipped' && needs.wait-for-process-and-fetch-rule.result == 'success') ||
-      # 如果两者都完成
-      (needs.wait-for-process-json-urls.result == 'success' && needs.wait-for-process-and-fetch-rule.result == 'success')
 
     steps:
     - name: Checkout code

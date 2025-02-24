@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: New Content
+  group: process-workflows-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
