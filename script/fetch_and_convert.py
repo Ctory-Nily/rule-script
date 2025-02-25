@@ -305,7 +305,6 @@ def write_total_md_file(folder_path: str, rule_list_data: List[Dict[str, Union[L
         formatted_row = []
         for cell in row:
             # 解析 cell，格式为 "rule_name,cn_name"
-            # rule_name, cn_name = cell.split(",", 1)  # 只分割一次，防止 cn_name 中包含逗号
             try:
                 rule_name, cn_name = cell.split(",", 1)
             except ValueError:
