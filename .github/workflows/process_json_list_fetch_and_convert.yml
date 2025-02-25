@@ -17,157 +17,171 @@ jobs:
   # 1.处理 Json 文件
   process_json:
     runs-on: ubuntu-latest
-    
+
+    # 将 has_changes 作为作业输出
+    outputs:
+      has_changes: ${{ steps.check-changes.outputs.has_changes }} 
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0  # 获取完整的历史记录
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取完整的历史记录
 
-    - name: Check for changes in script directory
-      id: check-changes
-      run: |
-        # 检查 script 文件夹下的 .json 文件是否有更改
-        if git diff --quiet HEAD~1 HEAD -- script/*.json; then
-          echo "No changes in user_rule directory."
-          echo "has_changes=false" >> $GITHUB_OUTPUT
-        else
-          echo "Changes detected in user_rule directory."
-          echo "has_changes=true" >> $GITHUB_OUTPUT
-        fi
-
-    - name: Install jq
-      if: steps.check-changes.outputs.has_changes == 'true'
-      run: sudo apt-get install -y jq
-
-    - name: Process JSON files
-      if: steps.check-changes.outputs.has_changes == 'true'
-      run: |
-        # 遍历 script/ 文件夹下的所有 .json 文件
-        for file in script/*.json; do
-          echo "Processing file: $file"
-
-          # 使用 jq 修改 rules_urls 中的 URL
-          jq '.[].rules_urls |= map(gsub("/refs/heads/"; "/"))' "$file" > "$file.tmp"
-          mv "$file.tmp" "$file"
-
-          echo "Updated file: $file"
-        done
-
-    - name: Commit and push changes
-      if: steps.check-changes.outputs.has_changes == 'true'
-      env:
-        GH_TOKEN: ${{ secrets.PUSH_EVERYDAY }}
-      run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Actions"
-        git add .
-        if git diff-index --quiet HEAD; then
-          echo "没有可替换内容，跳过提交。"
-        else
-          git commit -m "Automatically remove refs/heads/ from URLs in JSON files"
-          git pull origin main --rebase
-          git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
-          if git push origin main; then
-            echo "推送成功。"
+      - name: Check for changes in script directory
+        id: check-changes
+        run: |
+          # 检查 script 文件夹下的 .json 文件是否有更改
+          if git diff --quiet HEAD~1 HEAD -- script/*.json; then
+            echo "No changes in user_rule directory."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "推送失败，请检查远程分支是否有冲突。"
-            exit 1
+            echo "Changes detected in user_rule directory."
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
-        fi
+
+      - name: Install jq
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: sudo apt-get install -y jq
+
+      - name: Process JSON files
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          # 遍历 script/ 文件夹下的所有 .json 文件
+          for file in script/*.json; do
+            echo "Processing file: $file"
+
+            # 使用 jq 修改 rules_urls 中的 URL
+            jq '.[].rules_urls |= map(gsub("/refs/heads/"; "/"))' "$file" > "$file.tmp"
+            mv "$file.tmp" "$file"
+
+            echo "Updated file: $file"
+          done
+
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PUSH_EVERYDAY }}
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          if git diff-index --quiet HEAD; then
+            echo "没有可替换内容，跳过提交。"
+          else
+            git commit -m "Automatically remove refs/heads/ from URLs in JSON files"
+            git pull origin main --rebase
+            git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
+            if git push origin main; then
+              echo "推送成功。"
+            else
+              echo "推送失败，请检查远程分支是否有冲突。"
+              exit 1
+            fi
+          fi
 
   # 2.处理 list 文件
   process_list:
     runs-on: ubuntu-latest
-    
+
+    # 将 has_changes 作为作业输出
+    outputs:
+      has_changes: ${{ steps.check-changes.outputs.has_changes }} 
+
+    needs: process_json
+    if: ${{ always() }}
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0  # 获取完整的历史记录
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取完整的历史记录
 
-    - name: Check for changes in user_rule directory
-      id: check-changes
-      run: |
-        # 检查 user_rule 目录是否有更改
-        if git diff --quiet HEAD~1 HEAD -- user_rule; then
-          echo "No changes in user_rule directory."
-          echo "has_changes=false" >> $GITHUB_OUTPUT
-        else
-          echo "Changes detected in user_rule directory."
-          echo "has_changes=true" >> $GITHUB_OUTPUT
-        fi
-
-    - name: Set up Python
-      if: steps.check-changes.outputs.has_changes == 'true'
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-
-    # 运行 process_rules.py 脚本
-    - name: Run Process Rule Python script
-      if: steps.check-changes.outputs.has_changes == 'true'
-      run: |
-        python3 script/process_rules.py
-
-    - name: Commit processed rule changes
-      if: steps.check-changes.outputs.has_changes == 'true'
-      env:
-        GH_TOKEN: ${{ secrets.PUSH_EVERYDAY }}
-      run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Actions"
-        git add .
-        if git diff-index --quiet HEAD; then
-          echo "没有更改文件内容，跳过提交。"
-        else
-          git commit -m "Processed rule files with total rules count and sorted rules"
-          git pull origin main --rebase
-          git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
-          if git push origin main; then
-            echo "推送成功。"
+      - name: Check for changes in user_rule directory
+        id: check-changes
+        run: |
+          # 检查 user_rule 目录是否有更改
+          if git diff --quiet HEAD~1 HEAD -- user_rule; then
+            echo "No changes in user_rule directory."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "推送失败，请检查远程分支是否有冲突。"
-            exit 1
+            echo "Changes detected in user_rule directory."
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
-        fi
+
+      - name: Set up Python
+        if: steps.check-changes.outputs.has_changes == 'true'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      # 运行 process_rules.py 脚本
+      - name: Run Process Rule Python script
+        if: steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          python3 script/process_rules.py
+
+      - name: Commit processed rule changes
+        if: steps.check-changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PUSH_EVERYDAY }}
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          if git diff-index --quiet HEAD; then
+            echo "没有更改文件内容，跳过提交。"
+          else
+            git commit -m "Processed rule files with total rules count and sorted rules"
+            git pull origin main --rebase
+            git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
+            if git push origin main; then
+              echo "推送成功。"
+            else
+              echo "推送失败，请检查远程分支是否有冲突。"
+              exit 1
+            fi
+          fi
 
   # 3.抓取并转换文件
   fetch_and_convert:
     runs-on: ubuntu-latest
 
+    needs: process_list
+    if: ${{ always() }}
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install pyyaml requests
-    
-    # 运行 fetch_and_convert.py 脚本
-    - name: Run fetch and convert script
-      run: |
-        python script/fetch_and_convert.py
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml requests
+      
+      # 运行 fetch_and_convert.py 脚本
+      - name: Run fetch and convert script
+        run: |
+          python script/fetch_and_convert.py
 
-    # 提交推送
-    - name: Commit and push changes
-      env:
-        GH_TOKEN: ${{ secrets.PUSH_EVERYDAY }}
-      run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Actions"
-        git add .
-        if git diff-index --quiet HEAD; then
-          echo "没有文件更改，跳过提交。"
-        else
-          git commit -m "Auto-fetched and converted files to YAML"
-          git pull origin main --rebase
-          git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
-          if git push origin main; then
-            echo "推送成功。"
+      # 提交推送
+      - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.PUSH_EVERYDAY }}
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          if git diff-index --quiet HEAD; then
+            echo "没有文件更改，跳过提交。"
           else
-            echo "推送失败，请检查远程分支是否有冲突。"
-            exit 1
+            git commit -m "Auto-fetched and converted files to YAML"
+            git pull origin main --rebase
+            git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git
+            if git push origin main; then
+              echo "推送成功。"
+            else
+              echo "推送失败，请检查远程分支是否有冲突。"
+              exit 1
+            fi
           fi
-        fi
