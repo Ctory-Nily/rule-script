@@ -2,7 +2,7 @@ import os
 import requests
 import logging
 import json
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Union
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
