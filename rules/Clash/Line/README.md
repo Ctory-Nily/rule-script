@@ -4,7 +4,7 @@
 本文件由脚本自动生成
 
 ## 规则统计
-最后同步时间: 2025年02月25日 04:16
+最后同步时间: 2025年02月25日 09:09
 
 各类型规则统计:
 | 类型 | 数量(条)  | 
@@ -19,5 +19,5 @@
 ## Clash 
 ### 使用说明 
 Line.yaml, 请使用 behavior: 'classical' 
-### 规则链接 
+### 规则来源 
 - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Line/Line.list 
