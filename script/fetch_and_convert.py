@@ -300,15 +300,18 @@ def write_total_md_file(folder_path: str, rule_list_data: List[Dict[str, Union[L
     markdown_table = []
     markdown_table.append("| 规则名称 |" + " | ".join(["   "] * (width - 1) ) + " |")  # 表头
     markdown_table.append("|" + "----------|" * width)  # 分隔线
-    # for row in rows:
-    #     # 确保每个单元格是字符串
-    #     formatted_row = [f"[{cell:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{cell:<10})" for cell in row]
-    #     markdown_table.append("| " + "|".join(formatted_row) + " |")  # 使用字符串列表
+
     for row in rows:
         formatted_row = []
         for cell in row:
             # 解析 cell，格式为 "rule_name,cn_name"
-            rule_name, cn_name = cell.split(",", 1)  # 只分割一次，防止 cn_name 中包含逗号
+            # rule_name, cn_name = cell.split(",", 1)  # 只分割一次，防止 cn_name 中包含逗号
+            try:
+                rule_name, cn_name = cell.split(",", 1)
+            except ValueError:
+                rule_name = cell.split(",", 1)[0]
+                cn_name = None  # 或者其他默认值
+                
             # 如果 cn_name 有值，则使用 cn_name；否则使用 rule_name
             display_name = cn_name if cn_name.strip() else rule_name
             # 格式化单元格内容
