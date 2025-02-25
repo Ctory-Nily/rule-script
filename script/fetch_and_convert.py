@@ -310,10 +310,10 @@ def write_total_md_file(folder_path: str, rule_list_data: List[Dict[str, Union[L
                 rule_name, cn_name = cell.split(",", 1)
             except ValueError:
                 rule_name = cell.split(",", 1)[0]
-                cn_name = None  # 或者其他默认值
-                
+                cn_name = False  # 或者其他默认值
+
             # 如果 cn_name 有值，则使用 cn_name；否则使用 rule_name
-            display_name = cn_name if cn_name.strip() else rule_name
+            display_name = cn_name if cn_name else rule_name
             # 格式化单元格内容
             formatted_cell = f"[{display_name:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{rule_name:<10})"
             formatted_row.append(formatted_cell)
