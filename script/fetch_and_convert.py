@@ -143,7 +143,7 @@ def write_md_file(urls: List[str], rule_name: str, content: List[str], folder_pa
     md_content += f"### 使用说明 \n"
     md_content += f"{rule_name}.yaml, 请使用 behavior: 'classical' \n"
 
-    md_content += f"### 规则链接 \n"
+    md_content += f"### 规则来源 \n"
     for url in urls:
         md_content += f"- {url} \n"
 
@@ -170,14 +170,10 @@ def write_list_file(rule_name: str, content: List[str], folder_path: str) -> Non
     
     rule_number_dict = calculate_rule_number(content)
 
-    # 获取当前时间
-    now_time = get_time()
-
     # 添加标题注释
     formatted_content = [
         f"# 规则名称: {rule_name}",
         f"# 规则总数量: {rule_count}",
-        f"# 同步时间: {now_time}",
     ]
 
     for prefix, count in rule_number_dict.items():
@@ -210,14 +206,10 @@ def write_yaml_file(rule_name: str, content: List[str], folder_path: str) -> Non
     
     rule_number_dict = calculate_rule_number(content)
 
-    # 获取当前时间
-    now_time = get_time()
-
     # 添加标题注释
     formatted_content = [
         f"# 规则名称: {rule_name}",
         f"# 规则总数量: {rule_count}",
-        f"# 同步时间: {now_time}",
     ]
 
     for prefix, count in rule_number_dict.items():
