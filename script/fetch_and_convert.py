@@ -100,12 +100,13 @@ def sort_rules(rules: List[str]) -> List[str]:
 
     return sorted(rules, key=rule_key)
 
-def write_md_file(urls: List[str], rule_name: str, content: List[str], folder_path: str) -> None:
+def write_md_file(urls: List[str], rule_name: str, content: List[str], cn_name: str, folder_path: str) -> None:
     """
     在每个文件夹下生成 .md 说明文件
     :param urls: 文件的 URL 列表
     :param rule_name: 规则名称
     :param content: 内容列表
+    :param cn_name: 中文名称
     :param folder_path: 生成路径
     """
     os.makedirs(folder_path, exist_ok=True)
@@ -122,7 +123,7 @@ def write_md_file(urls: List[str], rule_name: str, content: List[str], folder_pa
     now_time = get_time()
 
     # 创建 Markdown 文件内容
-    md_content = f"""# {rule_name}
+    md_content = f"""# {cn_name if cn_name else rule_name}
 
 ## 前言
 本文件由脚本自动生成
@@ -228,11 +229,12 @@ def write_yaml_file(rule_name: str, content: List[str], folder_path: str) -> Non
     except IOError as e:
         logging.error(f".yaml 文件保存失败 {yaml_file_path} - {e}")
 
-def process_file(rule_name: str, urls: List[str], folder_path: str) -> None:
+def process_file(rule_name: str, urls: List[str], cn_name: str, folder_path: str) -> None:
     """
     下载文件、合并内容、排序规则并生成 .list 和 .yaml 文件。
     :param rule_name: 规则名称
     :param urls: 文件的 URL 列表
+    :param cn_name: 中文名称
     :param folder_path: 生成路径
     """
     file_contents = []
@@ -255,9 +257,9 @@ def process_file(rule_name: str, urls: List[str], folder_path: str) -> None:
     write_yaml_file(rule_name, sorted_content, rule_folder_path)    
 
     # 写入 .md文件
-    write_md_file(urls, rule_name, sorted_content, rule_folder_path)
+    write_md_file(urls, rule_name, sorted_content, cn_name, rule_folder_path)
 
-def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
+def write_total_md_file(folder_path: str, rule_list_data: List[Dict[str, Union[List[str], str]]], width = 5) -> None:
     """
     生成一个总的 .md文件
     :param folder_path: 生成路径
@@ -282,7 +284,7 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
 
 最后同步时间: {now_time} \n
 """
-    rule_names = [item["rule_name"] for item in rule_list_data]
+    rule_names = [f"{item['rule_name']},{item['cn_name']}" for item in rule_list_data]
 
     rows = []
     for i in range(0, len(rule_names), width):
@@ -298,9 +300,20 @@ def write_total_md_file(folder_path: str, rule_list_data ,width = 5) -> None:
     markdown_table = []
     markdown_table.append("| 规则名称 |" + " | ".join(["   "] * (width - 1) ) + " |")  # 表头
     markdown_table.append("|" + "----------|" * width)  # 分隔线
+    # for row in rows:
+    #     # 确保每个单元格是字符串
+    #     formatted_row = [f"[{cell:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{cell:<10})" for cell in row]
+    #     markdown_table.append("| " + "|".join(formatted_row) + " |")  # 使用字符串列表
     for row in rows:
-        # 确保每个单元格是字符串
-        formatted_row = [f"[{cell:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{cell:<10})" for cell in row]
+        formatted_row = []
+        for cell in row:
+            # 解析 cell，格式为 "rule_name,cn_name"
+            rule_name, cn_name = cell.split(",", 1)  # 只分割一次，防止 cn_name 中包含逗号
+            # 如果 cn_name 有值，则使用 cn_name；否则使用 rule_name
+            display_name = cn_name if cn_name.strip() else rule_name
+            # 格式化单元格内容
+            formatted_cell = f"[{display_name:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{rule_name:<10})"
+            formatted_row.append(formatted_cell)
         markdown_table.append("| " + "|".join(formatted_row) + " |")  # 使用字符串列表
 
     md_content += "\n".join(markdown_table)
@@ -333,7 +346,7 @@ if __name__ == "__main__":
 
     # 批量处理
     for item in rule_list_data:
-        process_file(item["rule_name"], item["rules_urls"], folder_path)
+        process_file(item["rule_name"], item["rules_urls"], item["cn_name"], folder_path)
     
     # 生成总的 .md文件
     write_total_md_file(folder_path, rule_list_data)
