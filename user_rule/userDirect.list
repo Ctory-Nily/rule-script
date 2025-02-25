@@ -1,6 +1,6 @@
 # 规则名称: userDirect 
 # 规则总数量: 2 
-# 更新时间: 2025年02月25日 09:08 
+# 更新时间: 2025年02月25日 09:19 
 # DOMAIN: 2 
 # DOMAIN-SUFFIX: 0 
 # DOMAIN-KEYWORD: 0 
@@ -8,11 +8,5 @@
 # IP-CIDR6: 0 
 # IP-SUFFIX: 0 
 
-DOMAIN,keylol.com
-DOMAIN,steamdb.info
-DOMAIN,keylol.com
-DOMAIN,steamdb.info
-DOMAIN,keylol.com
-DOMAIN,steamdb.info
 DOMAIN,keylol.com
 DOMAIN,steamdb.info
