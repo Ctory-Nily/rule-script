@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 182
-# DOMAIN: 176
-# DOMAIN-SUFFIX: 171
+# 规则总数量: 183
+# DOMAIN: 177
+# DOMAIN-SUFFIX: 172
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 6
 # IP-CIDR6: 0
@@ -145,6 +145,7 @@ payload:
   - DOMAIN-SUFFIX,ntrrr.am.sb
   - DOMAIN-SUFFIX,nvidia.rip
   - DOMAIN-SUFFIX,ohhhh.org
+  - DOMAIN-SUFFIX,onatoshi.114514.quest
   - DOMAIN-SUFFIX,ouonet.org
   - DOMAIN-SUFFIX,pilipili.club
   - DOMAIN-SUFFIX,pilipiliultra.com
