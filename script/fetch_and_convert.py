@@ -109,8 +109,6 @@ def write_md_file(urls: List[str], rule_name: str, content: List[str], cn_name: 
     :param cn_name: 中文名称
     :param folder_path: 生成路径
     """
-    os.makedirs(folder_path, exist_ok=True)
-
     md_file_path = os.path.join(folder_path, f"README.md")
 
     # 规则总数
@@ -170,8 +168,6 @@ def write_list_file(rule_name: str, content: List[str], folder_path: str) -> Non
     :param content: 内容列表
     :param folder_path: 生成路径
     """
-    os.makedirs(folder_path, exist_ok=True)
-
     list_file_path = os.path.join(folder_path, f"{rule_name}.list")
 
     # 规则总数
@@ -206,8 +202,6 @@ def write_yaml_file(rule_name: str, content: List[str], folder_path: str) -> Non
     :param content: 内容列表
     :param folder_path: 生成路径
     """
-    os.makedirs(folder_path, exist_ok=True)
-
     yaml_file_path = os.path.join(folder_path, f"{rule_name}.yaml")
 
     # 规则总数
@@ -274,8 +268,6 @@ def write_total_md_file(folder_path: str, rule_list_data: List[Dict[str, Union[L
     :param rule_list_data: 列表数据
     :param width: 表格宽度
     """
-    os.makedirs(folder_path, exist_ok=True)
-
     md_file_path = os.path.join(folder_path, f"README.md")
 
     # 获取当前时间
@@ -334,6 +326,7 @@ if __name__ == "__main__":
 
     # 自定义 rule 文件夹总路径
     folder_path = 'rules/Clash/'
+    os.makedirs(folder_path, exist_ok=True)
 
     # 获取 rule_file_list.json 的路径
     json_file_path = os.path.join(os.path.dirname(__file__), 'rule_file_list.json')
