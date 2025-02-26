@@ -4,7 +4,7 @@
 本文件由脚本自动生成
 
 ## 规则统计
-最后同步时间: 2025年02月26日 08:05
+最后同步时间: 2025年02月26日 08:08
 
 各类型规则统计:
 | 类型 | 数量(条)  | 
@@ -18,8 +18,12 @@
 | TOTAL | 72 | 
 ## Clash 
 ### 订阅链接 (每日更新) 
-https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/Steam_CN/Steam_CN.yaml 
-### 使用说明 
+
+    ```
+    https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/Steam_CN/Steam_CN.yaml
+    ``` 
+
+    ### 使用说明 
 Steam_CN.yaml, 请使用 behavior: 'classical' 
 ## 规则来源 
 - https://raw.githubusercontent.com/kirito12827/kk_zawuku/clash/user_rule/steam_CN.list 
