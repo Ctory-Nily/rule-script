@@ -144,9 +144,7 @@ def write_md_file(urls: List[str], rule_name: str, content: List[str], cn_name: 
 
     md_content += f"### 订阅链接 (每日更新) \n"
     md_content += f"""
-    ```
     https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/{rule_name}/{rule_name}.yaml
-    ``` \n
     """
 
     md_content += f"### 使用说明 \n"
