@@ -300,9 +300,9 @@ def write_total_md_file(folder_path: str, rule_list_data: List[Dict[str, Union[L
         rows.append(row)
 
     # 填充空的单元格
-    for row in rows:
-        while len(row) < width:
-            row.append(" " * 10)  # 用空格填充空单元格
+    # for row in rows:
+    #     while len(row) < width:
+    #         row.append(" ")  # 用空格填充空单元格
 
     # 生成表格
     markdown_table = []
@@ -322,9 +322,9 @@ def write_total_md_file(folder_path: str, rule_list_data: List[Dict[str, Union[L
             # 如果 cn_name 有值，则使用 cn_name；否则使用 rule_name
             display_name = cn_name if cn_name else rule_name
             # 格式化单元格内容
-            formatted_cell = f"[{display_name:<10}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{rule_name:<10})"
+            formatted_cell = f"[{display_name}](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/{rule_name})"
             formatted_row.append(formatted_cell)
-        markdown_table.append("| " + "|".join(formatted_row) + " |")  # 使用字符串列表
+        markdown_table.append("| " + " | ".join(formatted_row) + " |")  # 使用字符串列表
 
     md_content += "\n".join(markdown_table)
 
