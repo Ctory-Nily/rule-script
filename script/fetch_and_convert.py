@@ -140,17 +140,19 @@ def write_md_file(urls: List[str], rule_name: str, content: List[str], cn_name: 
         md_content += f"| {prefix} | {count} | \n"
     md_content += f"| TOTAL | {rule_count} | \n"
 
-    md_content += f"## Clash \n"
+    md_content += f"""## Clash
 
-    md_content += f"### 订阅链接 (每日更新) \n"
-    md_content += f"""
-    https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/{rule_name}/{rule_name}.yaml
-    """
+### 订阅链接 (每日更新)
+```
+https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/{rule_name}/{rule_name}.yaml
+```
 
-    md_content += f"### 使用说明 \n"
-    md_content += f"{rule_name}.yaml, 请使用 behavior: 'classical' \n"
+### 使用说明
+{rule_name}.yaml, 请使用 behavior: 'classical'
 
-    md_content += f"## 规则来源 \n"
+## 规则来源
+"""
+
     for url in urls:
         md_content += f"- {url} \n"
 
