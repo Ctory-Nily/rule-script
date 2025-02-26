@@ -33,10 +33,10 @@ jobs:
         run: |
           # 检查 script 文件夹下的 .json 文件是否有更改
           if git diff --quiet HEAD~1 HEAD -- script/*.json; then
-            echo "No changes in user_rule directory."
+            echo "No changes in script directory."
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected in user_rule directory."
+            echo "Changes detected in script directory."
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
@@ -158,6 +158,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml requests
       
       # 运行 fetch_and_convert.py 脚本
       - name: Run fetch and convert script
