@@ -299,11 +299,6 @@ def write_total_md_file(folder_path: str, rule_list_data: List[Dict[str, Union[L
         row = rule_names[i:i + width]
         rows.append(row)
 
-    # 填充空的单元格
-    # for row in rows:
-    #     while len(row) < width:
-    #         row.append(" ")  # 用空格填充空单元格
-
     # 生成表格
     markdown_table = []
     markdown_table.append("| 规则名称 |" + " | ".join(["   "] * (width - 1) ) + " |")  # 表头
