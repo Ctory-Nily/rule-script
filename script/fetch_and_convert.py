@@ -46,7 +46,7 @@ def calculate_rule_number(content: List[str]) -> Dict[str, int]:
     # 遍历数据并统计
     for line in content:
         for prefix in RULE_ORDER:
-            if line.startswith(prefix):
+            if line.startswith(f"{prefix},"):
                 rule_number_dict[prefix] += 1
     
     return rule_number_dict
