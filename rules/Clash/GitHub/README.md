@@ -1,10 +1,12 @@
 # GitHub
 
 ## 前言
+![](https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%E8%A7%84%E5%88%99-%E5%90%88%E5%B9%B6%E8%A7%84%E5%88%99-blue) ![](https://img.shields.io/badge/%E7%BB%9F%E8%AE%A1%E6%95%B0%E9%87%8F-green) ![](https://img.shields.io/badge/%E7%94%9F%E6%88%90%E8%AE%A2%E9%98%85-8A2BE2)
+
 本文件由脚本自动生成
 
 ## 规则统计
-最后同步时间: 2025年02月27日 11:03
+最后同步时间: 2025年02月27日 11:32
 
 各类型规则统计:
 | 类型        | 数量(条) |
