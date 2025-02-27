@@ -133,13 +133,13 @@ def write_md_file(urls: List[str], rule_name: str, content: List[str], cn_name: 
 最后同步时间: {now_time}
 
 各类型规则统计:
-| 类型 | 数量(条)  | 
-| ---- | ----  |
+| 类型        | 数量(条) |
+| ----------- | -------- |
 """
 
     for prefix, count in rule_number_dict.items():
-        md_content += f"| {prefix} | {count} | \n"
-    md_content += f"| TOTAL | {rule_count} | \n"
+        md_content += f"| {prefix:<12} | {count:<8} | \n"
+    md_content += f"| **TOTAL** | **{rule_count}** | \n"
 
     md_content += f"""## Clash
 
