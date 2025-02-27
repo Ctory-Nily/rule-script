@@ -54,19 +54,19 @@ def calculate_rule_number(content: List[str]) -> Dict[str, int]:
     
     return rule_number_dict
 
-def download_file(file_url: str) -> Optional[str]:
+def download_file(file_url: str, retries: int = 3) -> Optional[str]:
     """
-    下载指定的文件
+    下载指定文件
     :param file_url: 文件的 URL
     :return: 文件内容（字符串），失败时返回 None
     """
     try:
         response = requests.get(file_url, timeout=10)
-        response.raise_for_status()  # 抛出 HTTP 错误
-        logging.info(f"文件下载成功 from: {file_url}")
-        return response.text  # 返回文件内容
+        response.raise_for_status() # 抛出 HTTP 错误
+        logging.info(f"文件下载成功: {file_url}")
+        return response.text # 返回文件内容
     except requests.RequestException as e:
-        logging.error(f"文件下载失败 {file_url} - {e}")
+        logging.error(f"文件下载失败")
         return None
 
 def merge_file_contents(file_contents: List[str]) -> List[str]:
