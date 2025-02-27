@@ -1,9 +1,9 @@
 # 规则名称: YouTube
 # 规则总数量: 185
-# DOMAIN: 182
+# DOMAIN: 2
 # DOMAIN-SUFFIX: 179
 # DOMAIN-KEYWORD: 1
-# IP-CIDR: 3
+# IP-CIDR: 2
 # IP-CIDR6: 1
 # IP-SUFFIX: 0
 
