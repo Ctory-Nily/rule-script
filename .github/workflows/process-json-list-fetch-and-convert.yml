@@ -13,6 +13,9 @@ on:
   # 当 user_rule 文件夹下有更新时触发
       - 'user_rule/**'
 
+env:
+  TZ: Asia/Shanghai
+
 jobs:
   # 1.处理 Json 文件
   process_json:
