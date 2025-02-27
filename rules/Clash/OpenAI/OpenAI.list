@@ -6,7 +6,9 @@
 # IP-CIDR: 2
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
+# IP-ASN: 1
 # PROCESS-NAME: 0
+# AND: 0
 
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,chat.openai.com.cdn.cloudflare.net

@@ -6,7 +6,9 @@
 # IP-CIDR: 4
 # IP-CIDR6: 1
 # IP-SUFFIX: 0
+# IP-ASN: 0
 # PROCESS-NAME: 6
+# AND: 0
 
 payload:
   - DOMAIN,voice.telephony.goog

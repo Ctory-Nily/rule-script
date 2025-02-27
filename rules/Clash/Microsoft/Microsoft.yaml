@@ -6,7 +6,9 @@
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
+# IP-ASN: 0
 # PROCESS-NAME: 2
+# AND: 0
 
 payload:
   - DOMAIN,vsmarketplacebadge.apphb.com
