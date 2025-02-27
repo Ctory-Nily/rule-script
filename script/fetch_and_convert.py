@@ -19,7 +19,8 @@ RULE_ORDER = [
     "DOMAIN-KEYWORD",
     "IP-CIDR",
     "IP-CIDR6",
-    "IP-SUFFIX"
+    "IP-SUFFIX",
+    "PROCESS-NAME"
 ]
 
 def get_time() -> Optional[str]:
