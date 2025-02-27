@@ -6,6 +6,7 @@
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
+# PROCESS-NAME: 1
 
 DOMAIN,www.googleapis.com
 DOMAIN-SUFFIX,docs.google.com

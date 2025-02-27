@@ -6,6 +6,7 @@
 # IP-CIDR: 2
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
+# PROCESS-NAME: 0
 
 payload:
   - DOMAIN,browser-intake-datadoghq.com

@@ -6,6 +6,7 @@
 # IP-CIDR: 2
 # IP-CIDR6: 1
 # IP-SUFFIX: 0
+# PROCESS-NAME: 0
 
 DOMAIN,youtubei.googleapis.com
 DOMAIN,yt3.ggpht.com

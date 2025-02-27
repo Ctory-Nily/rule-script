@@ -6,6 +6,7 @@
 # IP-CIDR: 1115
 # IP-CIDR6: 4
 # IP-SUFFIX: 0
+# PROCESS-NAME: 1
 
 DOMAIN,e13252.dscg.akamaiedge.net
 DOMAIN,h-netflix.online-metrix.net
