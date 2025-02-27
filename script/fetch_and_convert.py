@@ -58,16 +58,20 @@ def download_file(file_url: str, retries: int = 3) -> Optional[str]:
     """
     下载指定文件
     :param file_url: 文件的 URL
+    :param retries: 重试次数
     :return: 文件内容（字符串），失败时返回 None
     """
-    try:
-        response = requests.get(file_url, timeout=10)
-        response.raise_for_status() # 抛出 HTTP 错误
-        logging.info(f"文件下载成功: {file_url}")
-        return response.text # 返回文件内容
-    except requests.RequestException as e:
-        logging.error(f"文件下载失败")
-        return None
+    for attempt in range(retries):
+        try:
+            response = requests.get(file_url, timeout=10)
+            response.raise_for_status()
+            logging.info(f"文件下载成功: {file_url}")
+            return response.text
+        except requests.RequestException as e:
+            logging.warning(f"文件下载失败（尝试 {attempt + 1}/{retries}）: {file_url} - {e}")
+            if attempt == retries - 1:
+                logging.error(f"文件下载失败，已达到最大重试次数: {file_url}")
+                return None
 
 def merge_file_contents(file_contents: List[str]) -> List[str]:
     """
