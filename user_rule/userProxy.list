@@ -1,12 +1,12 @@
 # 规则名称: userProxy 
-# 规则总数量: 1 
-# 更新时间: 2025年02月25日 09:24 
-# DOMAIN: 1 
+# 规则总数量: 2 
+# 更新时间: 2025年02月28日 22:08 
+# DOMAIN: 2 
 # DOMAIN-SUFFIX: 0 
 # DOMAIN-KEYWORD: 0 
 # IP-CIDR: 0 
 # IP-CIDR6: 0 
 # IP-SUFFIX: 0 
 
-DOMAIN,zi0.cc
 DOMAIN,steamdb.info
+DOMAIN,zi0.cc
