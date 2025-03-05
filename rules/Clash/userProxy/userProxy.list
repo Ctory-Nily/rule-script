@@ -1,7 +1,7 @@
 # 规则名称: userProxy
-# 规则总数量: 2
+# 规则总数量: 3
 # DOMAIN: 2
-# DOMAIN-SUFFIX: 0
+# DOMAIN-SUFFIX: 1
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
 # IP-CIDR6: 0
@@ -12,3 +12,4 @@
 
 DOMAIN,steamdb.info
 DOMAIN,zi0.cc
+DOMAIN-SUFFIX,api.steampowered.com
