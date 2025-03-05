@@ -145,11 +145,12 @@ def process_rule_folder(folder_path: str) -> None:
     """
     try:
         for filename in os.listdir(folder_path):
-            file_path = os.path.join(folder_path, filename)
-            if os.path.isfile(file_path) and is_list_file(file_path):
-                rulename = os.path.splitext(filename)[0]
-                count_rule_lines(file_path, rulename)
-                logging.info(f"处理文件成功: {file_path}，规则名称: {rulename}")
+            if filename.endswith('.list'):  # 只处理以 .list 结尾的文件
+                file_path = os.path.join(folder_path, filename)
+                if os.path.isfile(file_path) and is_list_file(file_path):  # 确保是文件
+                    rulename = os.path.splitext(filename)[0]  # 去掉后缀获取规则名
+                    count_rule_lines(file_path, rulename)
+                    logging.info(f"处理文件成功: {file_path}，规则名称: {rulename}")
     except Exception as e:
         logging.error(f"处理文件夹失败: {folder_path} - {e}")
 
