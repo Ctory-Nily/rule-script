@@ -1,33 +1,5 @@
 [
   {
-    "rule_name": "userDirect",
-    "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userDirect.list"
-    ],
-    "cn_name": "自用直连"
-  },
-  {
-    "rule_name": "userProxy",
-    "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userProxy.list"
-    ],
-    "cn_name": "自用外网"
-  },
-  {
-    "rule_name": "userReject",
-    "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/userReject.list"
-    ],
-    "cn_name": "自用排除"
-  },
-  {
-    "rule_name": "JP_Only",
-    "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/JP_Only.list"
-    ],
-    "cn_name": "自用仅限日本IP"
-  },
-  {
     "rule_name": "Emby",
     "rules_urls": [
       "https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Emby.list",
