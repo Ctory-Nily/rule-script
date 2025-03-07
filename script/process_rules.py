@@ -155,8 +155,8 @@ def process_rule_folder(folder_path: str) -> None:
         logging.error(f"处理文件夹失败: {folder_path} - {e}")
 
 if __name__ == "__main__":
-
     # 自定义 user_rule 文件夹路径
     folder_path = 'user_rule'
+    os.makedirs(folder_path, exist_ok=True)
 
     process_rule_folder(folder_path)
