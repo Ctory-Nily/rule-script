@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 183
+# 规则总数量: 184
 # DOMAIN: 5
-# DOMAIN-SUFFIX: 172
+# DOMAIN-SUFFIX: 173
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 6
 # IP-CIDR6: 0
@@ -46,6 +46,7 @@ DOMAIN-SUFFIX,bddup.com
 DOMAIN-SUFFIX,beebi.org
 DOMAIN-SUFFIX,bili.de
 DOMAIN-SUFFIX,bili.rip
+DOMAIN-SUFFIX,biliblili.uk
 DOMAIN-SUFFIX,blueseacdn.com
 DOMAIN-SUFFIX,carlos.trade
 DOMAIN-SUFFIX,carryz.net
