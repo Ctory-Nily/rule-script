@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 185
+# 规则总数量: 187
 # DOMAIN: 5
-# DOMAIN-SUFFIX: 174
+# DOMAIN-SUFFIX: 176
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 6
 # IP-CIDR6: 0
@@ -60,6 +60,7 @@ DOMAIN-SUFFIX,cherrytv.one
 DOMAIN-SUFFIX,cinema.facmata.net
 DOMAIN-SUFFIX,deja-vu.beauty
 DOMAIN-SUFFIX,dicarerhome.com
+DOMAIN-SUFFIX,doven.tv
 DOMAIN-SUFFIX,ednovas.org
 DOMAIN-SUFFIX,em.ssky.me
 DOMAIN-SUFFIX,emby-cf.plusmedia.site
@@ -140,6 +141,7 @@ DOMAIN-SUFFIX,mjjemby.org
 DOMAIN-SUFFIX,movie.xeton.dev
 DOMAIN-SUFFIX,moyuancn.vip
 DOMAIN-SUFFIX,mulgore.net
+DOMAIN-SUFFIX,mxtvf.cn
 DOMAIN-SUFFIX,nanflix.net
 DOMAIN-SUFFIX,nebula-media.org
 DOMAIN-SUFFIX,newpppp.com
