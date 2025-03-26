@@ -6,21 +6,21 @@
 本文件由脚本自动生成
 
 ## 规则统计
-最后同步时间: 2025年03月26日 04:21
+最后同步时间: 2025年03月27日 04:21
 
 各类型规则统计:
 | 类型        | 数量(条) |
 | ----------- | -------- |
-| DOMAIN       | 9        | 
+| DOMAIN       | 11       | 
 | DOMAIN-SUFFIX | 177      | 
 | DOMAIN-KEYWORD | 0        | 
-| IP-CIDR      | 11       | 
+| IP-CIDR      | 15       | 
 | IP-CIDR6     | 0        | 
 | IP-SUFFIX    | 0        | 
 | IP-ASN       | 0        | 
 | PROCESS-NAME | 0        | 
 | AND          | 0        | 
-| **TOTAL** | **197** | 
+| **TOTAL** | **203** | 
 ## Clash
 
 ### 订阅链接 (每日更新)

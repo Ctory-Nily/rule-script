@@ -1,9 +1,9 @@
 # 规则名称: Emby
-# 规则总数量: 197
-# DOMAIN: 9
+# 规则总数量: 203
+# DOMAIN: 11
 # DOMAIN-SUFFIX: 177
 # DOMAIN-KEYWORD: 0
-# IP-CIDR: 11
+# IP-CIDR: 15
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
 # IP-ASN: 0
@@ -20,6 +20,8 @@ payload:
   - DOMAIN,notnetflix.cos.cat
   - DOMAIN,starharn-cf.nebula-media.org
   - DOMAIN,starharn.nebula-media.org
+  - DOMAIN,web-starharn.nebula-media.org
+  - DOMAIN,web.nebula-media.org
   - DOMAIN-SUFFIX,1024.name
   - DOMAIN-SUFFIX,1024.one
   - DOMAIN-SUFFIX,123456.al
@@ -197,9 +199,12 @@ payload:
   - DOMAIN-SUFFIX,xmsl.org
   - DOMAIN-SUFFIX,zi0.icu
   - DOMAIN-SUFFIX,zox.show
+  - IP-CIDR,103.197.185.84/32,no-resolve
   - IP-CIDR,135.180.189.141/32,no-resolve
+  - IP-CIDR,148.135.94.8/32,no-resolve
   - IP-CIDR,152.53.54.201/32,no-resolve
   - IP-CIDR,152.53.67.239/32,no-resolve
+  - IP-CIDR,154.40.33.88/32,no-resolve
   - IP-CIDR,168.119.137.205/32,no-resolve
   - IP-CIDR,188.172.228.49/32,no-resolve
   - IP-CIDR,195.128.100.146/32,no-resolve
@@ -208,3 +213,4 @@ payload:
   - IP-CIDR,202.61.247.129/32,no-resolve
   - IP-CIDR,202.61.255.248/32,no-resolve
   - IP-CIDR,212.90.120.164/32,no-resolve
+  - IP-CIDR,37.123.192.219/32,no-resolve

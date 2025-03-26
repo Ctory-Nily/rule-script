@@ -1,7 +1,7 @@
 # 规则名称: Google
-# 规则总数量: 714
+# 规则总数量: 715
 # DOMAIN: 1
-# DOMAIN-SUFFIX: 697
+# DOMAIN-SUFFIX: 698
 # DOMAIN-KEYWORD: 5
 # IP-CIDR: 4
 # IP-CIDR6: 1
@@ -41,6 +41,7 @@ DOMAIN-SUFFIX,androidtv.com
 DOMAIN-SUFFIX,angulardart.org
 DOMAIN-SUFFIX,api.ai
 DOMAIN-SUFFIX,apigee.com
+DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,app-measurement-cn.com
 DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,app-measurement.net
