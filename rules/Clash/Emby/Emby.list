@@ -1,6 +1,6 @@
 # 规则名称: Emby
-# 规则总数量: 203
-# DOMAIN: 11
+# 规则总数量: 205
+# DOMAIN: 13
 # DOMAIN-SUFFIX: 177
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 15
@@ -11,10 +11,12 @@
 # AND: 0
 
 DOMAIN,2pfdml.mobaiemby.site
+DOMAIN,cavps.eu.org
 DOMAIN,cc.coemn.com
 DOMAIN,cf-cdn1.nebula-media.org
 DOMAIN,cminf.sfcat.link
 DOMAIN,cuinf.sfcat.link
+DOMAIN,emby-cdn1.nebula-media.org
 DOMAIN,emby.nebula-media.org
 DOMAIN,notnetflix.cos.cat
 DOMAIN,starharn-cf.nebula-media.org
