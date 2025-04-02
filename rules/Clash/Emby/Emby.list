@@ -1,9 +1,9 @@
 # 规则名称: Emby
-# 规则总数量: 205
-# DOMAIN: 13
-# DOMAIN-SUFFIX: 177
+# 规则总数量: 201
+# DOMAIN: 12
+# DOMAIN-SUFFIX: 178
 # DOMAIN-KEYWORD: 0
-# IP-CIDR: 15
+# IP-CIDR: 11
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
 # IP-ASN: 0
@@ -11,7 +11,6 @@
 # AND: 0
 
 DOMAIN,2pfdml.mobaiemby.site
-DOMAIN,cavps.eu.org
 DOMAIN,cc.coemn.com
 DOMAIN,cf-cdn1.nebula-media.org
 DOMAIN,cminf.sfcat.link
@@ -46,6 +45,7 @@ DOMAIN-SUFFIX,agon.cf
 DOMAIN-SUFFIX,alist7.eu.org
 DOMAIN-SUFFIX,aliz.work
 DOMAIN-SUFFIX,alphatvapp.top
+DOMAIN-SUFFIX,anisaga.tv
 DOMAIN-SUFFIX,as174.de
 DOMAIN-SUFFIX,az-hk.embyclub.com
 DOMAIN-SUFFIX,azsgp.embyclub.com
@@ -200,12 +200,9 @@ DOMAIN-SUFFIX,xiaoyi.one
 DOMAIN-SUFFIX,xmsl.org
 DOMAIN-SUFFIX,zi0.icu
 DOMAIN-SUFFIX,zox.show
-IP-CIDR,103.197.185.84/32,no-resolve
 IP-CIDR,135.180.189.141/32,no-resolve
-IP-CIDR,148.135.94.8/32,no-resolve
 IP-CIDR,152.53.54.201/32,no-resolve
 IP-CIDR,152.53.67.239/32,no-resolve
-IP-CIDR,154.40.33.88/32,no-resolve
 IP-CIDR,168.119.137.205/32,no-resolve
 IP-CIDR,188.172.228.49/32,no-resolve
 IP-CIDR,195.128.100.146/32,no-resolve
@@ -214,4 +211,3 @@ IP-CIDR,195.201.86.86/32,no-resolve
 IP-CIDR,202.61.247.129/32,no-resolve
 IP-CIDR,202.61.255.248/32,no-resolve
 IP-CIDR,212.90.120.164/32,no-resolve
-IP-CIDR,37.123.192.219/32,no-resolve
