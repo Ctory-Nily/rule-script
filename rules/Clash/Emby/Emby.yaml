@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 201
+# 规则总数量: 202
 # DOMAIN: 12
-# DOMAIN-SUFFIX: 178
+# DOMAIN-SUFFIX: 179
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 11
 # IP-CIDR6: 0
@@ -146,6 +146,7 @@ payload:
   - DOMAIN-SUFFIX,magpie.cyou
   - DOMAIN-SUFFIX,magpiecdn.tech
   - DOMAIN-SUFFIX,mcjoker.xyz
+  - DOMAIN-SUFFIX,micu.hk
   - DOMAIN-SUFFIX,misty.ltd
   - DOMAIN-SUFFIX,mius.uk
   - DOMAIN-SUFFIX,mjjemby.org
