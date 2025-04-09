@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 202
+# 规则总数量: 203
 # DOMAIN: 12
-# DOMAIN-SUFFIX: 179
+# DOMAIN-SUFFIX: 180
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 11
 # IP-CIDR6: 0
@@ -164,6 +164,7 @@ payload:
   - DOMAIN-SUFFIX,ohhhh.org
   - DOMAIN-SUFFIX,onatoshi.114514.quest
   - DOMAIN-SUFFIX,ouonet.org
+  - DOMAIN-SUFFIX,pcmhub.org
   - DOMAIN-SUFFIX,pilipili.club
   - DOMAIN-SUFFIX,pilipiliultra.com
   - DOMAIN-SUFFIX,pilipiliultra.top
