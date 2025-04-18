@@ -1,9 +1,9 @@
 # 规则名称: Emby
-# 规则总数量: 203
+# 规则总数量: 204
 # DOMAIN: 12
 # DOMAIN-SUFFIX: 180
 # DOMAIN-KEYWORD: 0
-# IP-CIDR: 11
+# IP-CIDR: 12
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
 # IP-ASN: 0
@@ -204,6 +204,7 @@ DOMAIN-SUFFIX,zi0.icu
 DOMAIN-SUFFIX,zox.show
 IP-CIDR,135.180.189.141/32,no-resolve
 IP-CIDR,152.53.54.201/32,no-resolve
+IP-CIDR,152.53.55.180/32,no-resolve
 IP-CIDR,152.53.67.239/32,no-resolve
 IP-CIDR,168.119.137.205/32,no-resolve
 IP-CIDR,188.172.228.49/32,no-resolve
