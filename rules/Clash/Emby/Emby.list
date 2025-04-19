@@ -1,6 +1,6 @@
 # 规则名称: Emby
-# 规则总数量: 204
-# DOMAIN: 12
+# 规则总数量: 205
+# DOMAIN: 13
 # DOMAIN-SUFFIX: 180
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 12
@@ -17,6 +17,7 @@ DOMAIN,cminf.sfcat.link
 DOMAIN,cuinf.sfcat.link
 DOMAIN,emby-cdn1.nebula-media.org
 DOMAIN,emby.nebula-media.org
+DOMAIN,emby.nekoda.de
 DOMAIN,notnetflix.cos.cat
 DOMAIN,starharn-cf.nebula-media.org
 DOMAIN,starharn.nebula-media.org
