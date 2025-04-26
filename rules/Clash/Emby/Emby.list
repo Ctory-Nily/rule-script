@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 206
+# 规则总数量: 208
 # DOMAIN: 13
-# DOMAIN-SUFFIX: 181
+# DOMAIN-SUFFIX: 183
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 12
 # IP-CIDR6: 0
@@ -163,6 +163,7 @@ DOMAIN-SUFFIX,ntrrr.am.sb
 DOMAIN-SUFFIX,nvidia.rip
 DOMAIN-SUFFIX,ohhhh.org
 DOMAIN-SUFFIX,onatoshi.114514.quest
+DOMAIN-SUFFIX,onyra.cc
 DOMAIN-SUFFIX,ouonet.org
 DOMAIN-SUFFIX,pcmhub.org
 DOMAIN-SUFFIX,pilipili.club
@@ -201,6 +202,7 @@ DOMAIN-SUFFIX,vfing.de
 DOMAIN-SUFFIX,wiri.tk
 DOMAIN-SUFFIX,xiaoyi.one
 DOMAIN-SUFFIX,xmsl.org
+DOMAIN-SUFFIX,younoyes.com
 DOMAIN-SUFFIX,yunti.online
 DOMAIN-SUFFIX,zi0.icu
 DOMAIN-SUFFIX,zox.show
