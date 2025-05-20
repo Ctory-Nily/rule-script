@@ -54,7 +54,6 @@ payload:
   - DOMAIN-SUFFIX,baisi.pro
   - DOMAIN-SUFFIX,bangumi.ca
   - DOMAIN-SUFFIX,bddup.com
-  - DOMAIN-SUFFIX,beebi.org
   - DOMAIN-SUFFIX,bili.de
   - DOMAIN-SUFFIX,bili.rip
   - DOMAIN-SUFFIX,biliblili.uk
@@ -124,6 +123,7 @@ payload:
   - DOMAIN-SUFFIX,embyplus.org
   - DOMAIN-SUFFIX,embyserver.ga
   - DOMAIN-SUFFIX,embytv.cf
+  - DOMAIN-SUFFIX,feiniu.lol
   - DOMAIN-SUFFIX,free.28.al
   - DOMAIN-SUFFIX,freetz.top
   - DOMAIN-SUFFIX,gfwemby.org
