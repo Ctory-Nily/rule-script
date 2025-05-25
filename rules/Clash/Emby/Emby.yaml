@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 210
+# 规则总数量: 213
 # DOMAIN: 13
-# DOMAIN-SUFFIX: 184
+# DOMAIN-SUFFIX: 187
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 13
 # IP-CIDR6: 0
@@ -36,6 +36,7 @@ payload:
   - DOMAIN-SUFFIX,4545.cf
   - DOMAIN-SUFFIX,581658.best
   - DOMAIN-SUFFIX,7777777.buzz
+  - DOMAIN-SUFFIX,785858.xyz
   - DOMAIN-SUFFIX,9191001.xyz
   - DOMAIN-SUFFIX,91ai.de
   - DOMAIN-SUFFIX,9521732.xyz
@@ -190,6 +191,7 @@ payload:
   - DOMAIN-SUFFIX,shuipo.lol
   - DOMAIN-SUFFIX,speedx.one
   - DOMAIN-SUFFIX,starcat.eu.org
+  - DOMAIN-SUFFIX,staryuki.com
   - DOMAIN-SUFFIX,stream.ntrrr.top
   - DOMAIN-SUFFIX,stream.synn.cc
   - DOMAIN-SUFFIX,studyfun.live
@@ -206,6 +208,7 @@ payload:
   - DOMAIN-SUFFIX,xmsl.org
   - DOMAIN-SUFFIX,younoyes.com
   - DOMAIN-SUFFIX,yunti.online
+  - DOMAIN-SUFFIX,zabc.net
   - DOMAIN-SUFFIX,zi0.icu
   - DOMAIN-SUFFIX,zox.show
   - IP-CIDR,135.180.189.141/32,no-resolve
