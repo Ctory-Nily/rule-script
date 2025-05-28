@@ -1,6 +1,6 @@
 # 规则名称: Emby
-# 规则总数量: 213
-# DOMAIN: 13
+# 规则总数量: 214
+# DOMAIN: 14
 # DOMAIN-SUFFIX: 187
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 13
@@ -13,6 +13,7 @@
 payload:
   - DOMAIN,2pfdml.mobaiemby.site
   - DOMAIN,cc.coemn.com
+  - DOMAIN,cdn1.nebula-media.org
   - DOMAIN,cf-cdn1.nebula-media.org
   - DOMAIN,cminf.sfcat.link
   - DOMAIN,cuinf.sfcat.link
