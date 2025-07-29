@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 219
+# 规则总数量: 218
 # DOMAIN: 14
-# DOMAIN-SUFFIX: 192
+# DOMAIN-SUFFIX: 191
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 13
 # IP-CIDR6: 0
@@ -24,8 +24,6 @@ DOMAIN,starharn-cf.nebula-media.org
 DOMAIN,starharn.nebula-media.org
 DOMAIN,web-starharn.nebula-media.org
 DOMAIN,web.nebula-media.org
-DOMAIN-SUFFIX,1024.name
-DOMAIN-SUFFIX,1024.one
 DOMAIN-SUFFIX,123456.al
 DOMAIN-SUFFIX,16bit.cfd
 DOMAIN-SUFFIX,1l1.icu
@@ -68,6 +66,7 @@ DOMAIN-SUFFIX,cc.semby.ink
 DOMAIN-SUFFIX,cf.odysseyplus.site
 DOMAIN-SUFFIX,charontv.com
 DOMAIN-SUFFIX,cherrytv.one
+DOMAIN-SUFFIX,chilledmelon.com
 DOMAIN-SUFFIX,ciallo.party
 DOMAIN-SUFFIX,cinema.facmata.net
 DOMAIN-SUFFIX,deja-vu.beauty
