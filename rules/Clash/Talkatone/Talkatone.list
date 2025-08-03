@@ -1,7 +1,7 @@
 # 规则名称: Talkatone
-# 规则总数量: 17
+# 规则总数量: 16
 # DOMAIN: 0
-# DOMAIN-SUFFIX: 12
+# DOMAIN-SUFFIX: 11
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 5
 # IP-CIDR6: 0
@@ -15,7 +15,6 @@ DOMAIN-SUFFIX,cohere.com
 DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,inmobi.com
 DOMAIN-SUFFIX,inner-active.mobi
-DOMAIN-SUFFIX,ip-api.com
 DOMAIN-SUFFIX,kochava.com
 DOMAIN-SUFFIX,mobilefuse.com
 DOMAIN-SUFFIX,talkatone.com
