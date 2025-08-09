@@ -1,7 +1,7 @@
 # 规则名称: TikTok
-# 规则总数量: 106
+# 规则总数量: 107
 # DOMAIN: 38
-# DOMAIN-SUFFIX: 58
+# DOMAIN-SUFFIX: 59
 # DOMAIN-KEYWORD: 9
 # IP-CIDR: 0
 # IP-CIDR6: 0
@@ -97,6 +97,7 @@ DOMAIN-SUFFIX,tiktokv.us
 DOMAIN-SUFFIX,tiktokw.us
 DOMAIN-SUFFIX,tlivecdn.com
 DOMAIN-SUFFIX,tlivepush.com
+DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,ttadsmanager.com
 DOMAIN-SUFFIX,ttapis.com
 DOMAIN-SUFFIX,ttdns2.com
