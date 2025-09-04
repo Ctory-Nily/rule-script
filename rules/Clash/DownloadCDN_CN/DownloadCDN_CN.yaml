@@ -1,6 +1,6 @@
 # 规则名称: DownloadCDN_CN
-# 规则总数量: 18
-# DOMAIN: 17
+# 规则总数量: 16
+# DOMAIN: 15
 # DOMAIN-SUFFIX: 1
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
@@ -11,7 +11,6 @@
 # AND: 0
 
 payload:
-  - DOMAIN,alibaba.cdn.steampipe.steamcontent.com
   - DOMAIN,assets1.xboxlive.cn
   - DOMAIN,assets2.xboxlive.cn
   - DOMAIN,cdn-ali.content.steamchina.com
@@ -20,7 +19,6 @@ payload:
   - DOMAIN,dl.delivery.mp.microsoft.com
   - DOMAIN,dl.steam.clngaa.com
   - DOMAIN,epicgames-download1-1251447533.file.myqcloud.com
-  - DOMAIN,lv.queniujq.cn
   - DOMAIN,st.dl.bscstorage.net
   - DOMAIN,st.dl.eccdnx.com
   - DOMAIN,steampipe.steamcontent.tnkjmec.com

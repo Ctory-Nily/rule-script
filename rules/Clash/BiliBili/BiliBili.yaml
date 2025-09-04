@@ -1,6 +1,6 @@
 # 规则名称: BiliBili
-# 规则总数量: 131
-# DOMAIN: 55
+# 规则总数量: 129
+# DOMAIN: 53
 # DOMAIN-SUFFIX: 62
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 8
@@ -60,12 +60,10 @@ payload:
   - DOMAIN,3geauymtsgrzdrcbzfahue.ourdvsss.com
   - DOMAIN,3geauymtsgrzdrcbzfahuk.ourdvsss.com
   - DOMAIN,4go41hcjtgazdoctqge4o.ourdvsss.com
-  - DOMAIN,apiintl.biliapi.net
   - DOMAIN,p-bstarstatic.akamaized.net
   - DOMAIN,p.bstarstatic.com
   - DOMAIN,upos-bstar-mirrorakam.akamaized.net
   - DOMAIN,upos-bstar1-mirrorakam.akamaized.net
-  - DOMAIN,upos-hz-mirrorakam.akamaized.net
   - DOMAIN-SUFFIX,acg.tv
   - DOMAIN-SUFFIX,acgvideo.com
   - DOMAIN-SUFFIX,animetamashi.cn
