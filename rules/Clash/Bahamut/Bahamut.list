@@ -1,6 +1,6 @@
 # 规则名称: Bahamut
-# 规则总数量: 7
-# DOMAIN: 1
+# 规则总数量: 9
+# DOMAIN: 3
 # DOMAIN-SUFFIX: 6
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
@@ -11,6 +11,8 @@
 # AND: 0
 
 DOMAIN,bahamut.akamaized.net
+DOMAIN,gamer-cds.cdn.hinet.net
+DOMAIN,gamer2-cds.cdn.hinet.net
 DOMAIN-SUFFIX,bahamut.com.tw
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,gamer.com.tw

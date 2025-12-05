@@ -6,12 +6,12 @@
 本文件由脚本自动生成
 
 ## 规则统计
-最后同步时间: 2025年12月05日 04:26
+最后同步时间: 2025年12月05日 09:38
 
 各类型规则统计:
 | 类型        | 数量(条) |
 | ----------- | -------- |
-| DOMAIN       | 53       | 
+| DOMAIN       | 55       | 
 | DOMAIN-SUFFIX | 62       | 
 | DOMAIN-KEYWORD | 0        | 
 | IP-CIDR      | 8        | 
@@ -20,7 +20,7 @@
 | IP-ASN       | 0        | 
 | PROCESS-NAME | 6        | 
 | AND          | 0        | 
-| **TOTAL** | **129** | 
+| **TOTAL** | **131** | 
 ## Clash
 
 ### 订阅链接 (每日更新)
@@ -33,4 +33,4 @@ BiliBili.yaml, 请使用 behavior: 'classical'
 
 ## 规则来源
 - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.list 
-- https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Rules/Bilibili.list 
+- https://raw.githubusercontent.com/Repcz/Tool/X/mihomo/Rules/Bilibili.list 
