@@ -1,7 +1,7 @@
 # 规则名称: Google
-# 规则总数量: 715
+# 规则总数量: 716
 # DOMAIN: 1
-# DOMAIN-SUFFIX: 698
+# DOMAIN-SUFFIX: 699
 # DOMAIN-KEYWORD: 5
 # IP-CIDR: 4
 # IP-CIDR6: 1
@@ -150,6 +150,7 @@ payload:
   - DOMAIN-SUFFIX,bumptop.net
   - DOMAIN-SUFFIX,bumptop.org
   - DOMAIN-SUFFIX,bumptunes.com
+  - DOMAIN-SUFFIX,c.gle
   - DOMAIN-SUFFIX,campuslondon.com
   - DOMAIN-SUFFIX,capitalg.com
   - DOMAIN-SUFFIX,certificate-transparency.dev
