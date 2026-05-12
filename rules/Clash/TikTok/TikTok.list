@@ -1,12 +1,12 @@
 # 规则名称: TikTok
-# 规则总数量: 92
+# 规则总数量: 94
 # DOMAIN: 22
 # DOMAIN-SUFFIX: 60
 # DOMAIN-KEYWORD: 9
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # IP-SUFFIX: 0
-# IP-ASN: 0
+# IP-ASN: 2
 # PROCESS-NAME: 1
 # AND: 0
 
@@ -101,4 +101,6 @@ DOMAIN-KEYWORD,tiktokcdn.com.
 DOMAIN-KEYWORD,tiktokv.com.
 DOMAIN-KEYWORD,ttcdn-tos.
 DOMAIN-KEYWORD,ttlivecdn.com.
+IP-ASN,11983
+IP-ASN,138699
 PROCESS-NAME,com.zhiliaoapp.musically
