@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 221
+# 规则总数量: 222
 # DOMAIN: 10
-# DOMAIN-SUFFIX: 198
+# DOMAIN-SUFFIX: 199
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 13
 # IP-CIDR6: 0
@@ -130,6 +130,7 @@ DOMAIN-SUFFIX,goodisp.org
 DOMAIN-SUFFIX,gtlx.org
 DOMAIN-SUFFIX,gugumedia.link
 DOMAIN-SUFFIX,happyav.eu.org
+DOMAIN-SUFFIX,hgemby.qzz.io
 DOMAIN-SUFFIX,hovervan.org
 DOMAIN-SUFFIX,i109.com
 DOMAIN-SUFFIX,ii00.cc
