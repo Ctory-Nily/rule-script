@@ -6,7 +6,7 @@
 本文件由脚本自动生成
 
 ## 规则统计
-最后同步时间: 2026年06月08日 20:52
+最后同步时间: 2026年06月09日 05:50
 
 各类型规则统计:
 | 类型        | 数量(条) |
@@ -32,5 +32,5 @@ https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/WeChat
 WeChat.yaml, 请使用 behavior: 'classical'
 
 ## 规则来源
-- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.list 
-- https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/WeChat.list 
+- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.list 
+- https://raw.githubusercontent.com/Repcz/Tool/X/mihomo/Rules/WeChat.list 
