@@ -262,6 +262,12 @@ def process_file(rule_name: str, urls: List[str], cn_name: str, folder_path: str
 
     # 在 rules/Clash 目录下创建同名文件夹
     rule_folder_path = os.path.join(folder_path, rule_name)
+    
+    # 确保父目录存在
+    os.makedirs(folder_path, exist_ok=True)
+    
+    # 创建目标文件夹
+    os.makedirs(rule_folder_path, exist_ok=True)
 
     # 写入 .list 和 .yaml文件
     write_list_file(rule_name, sorted_content, rule_folder_path)
