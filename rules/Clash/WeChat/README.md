@@ -1,4 +1,4 @@
-# GitHub
+# 微信
 
 ## 前言
 ![](https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD%E8%A7%84%E5%88%99-%E5%90%88%E5%B9%B6%E8%A7%84%E5%88%99-blue) ![](https://img.shields.io/badge/%E7%BB%9F%E8%AE%A1%E6%95%B0%E9%87%8F-green) ![](https://img.shields.io/badge/%E7%94%9F%E6%88%90%E8%AE%A2%E9%98%85-8A2BE2)
@@ -11,26 +11,26 @@
 各类型规则统计:
 | 类型        | 数量(条) |
 | ----------- | -------- |
-| DOMAIN       | 0        | 
+| DOMAIN       | 10       | 
 | DOMAIN-SUFFIX | 30       | 
-| DOMAIN-KEYWORD | 1        | 
-| IP-CIDR      | 0        | 
-| IP-CIDR6     | 0        | 
+| DOMAIN-KEYWORD | 233      | 
+| IP-CIDR      | 3        | 
+| IP-CIDR6     | 69       | 
 | IP-SUFFIX    | 0        | 
-| IP-ASN       | 0        | 
+| IP-ASN       | 1        | 
 | PROCESS-NAME | 0        | 
 | AND          | 0        | 
-| **TOTAL** | **31** | 
+| **TOTAL** | **346** | 
 ## Clash
 
 ### 订阅链接 (每日更新)
 ```
-https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/GitHub/GitHub.yaml
+https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/WeChat/WeChat.yaml
 ```
 
 ### 使用说明
-GitHub.yaml, 请使用 behavior: 'classical'
+WeChat.yaml, 请使用 behavior: 'classical'
 
 ## 规则来源
-- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list 
-- https://raw.githubusercontent.com/Repcz/Tool/X/mihomo/Rules/Github.list 
+- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.list 
+- https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/mihomo/Rules/WeChat.list 
