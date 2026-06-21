@@ -1,0 +1,15 @@
+# 规则名称: ZaiManga
+# 规则总数量: 3
+# DOMAIN: 0
+# DOMAIN-SUFFIX: 3
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
+# IP-ASN: 0
+# PROCESS-NAME: 0
+# AND: 0
+
+DOMAIN-SUFFIX,m.zaimanhua.com
+DOMAIN-SUFFIX,manhua.zaimanhua.com
+DOMAIN-SUFFIX,zaimanhua.com
