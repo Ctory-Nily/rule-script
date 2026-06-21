@@ -247,14 +247,14 @@
   {
     "rule_name": "CopyManga",
     "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/CopyManga.list"
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/CopyManga.list"
     ],
     "cn_name": "拷贝漫画"
   },
   {
     "rule_name": "Bangumi",
     "rules_urls": [
-      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/Bangumi.list"
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/Bangumi.list"
     ],
     "cn_name": ""
   }
