@@ -1,3 +1,13 @@
-DOMAIN-SUFFIX,bgm.tv
+# 规则名称: Bangumi 
+# 规则总数量: 3 
+# 更新时间: 2026年06月21日 17:18 
+# DOMAIN: 3 
+# DOMAIN-SUFFIX: 3 
+# DOMAIN-KEYWORD: 0 
+# IP-CIDR: 0 
+# IP-CIDR6: 0 
+# IP-SUFFIX: 0 
+
 DOMAIN-SUFFIX,bangumi.tv
+DOMAIN-SUFFIX,bgm.tv
 DOMAIN-SUFFIX,chii.in
