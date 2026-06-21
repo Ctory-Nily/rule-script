@@ -252,6 +252,13 @@
     "cn_name": "拷贝漫画"
   },
   {
+    "rule_name": "ZaiManga",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/ZaiManga.list"
+    ],
+    "cn_name": "再漫画"
+  },
+  {
     "rule_name": "Bangumi",
     "rules_urls": [
       "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/Bangumi.list"
