@@ -243,5 +243,19 @@
       "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EHGallery/EHGallery.list"
     ],
     "cn_name": ""
+  },
+  {
+    "rule_name": "CopyManga",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/CopyManga.list"
+    ],
+    "cn_name": "拷贝漫画"
+  },
+  {
+    "rule_name": "Bangumi",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/Bangumi.list"
+    ],
+    "cn_name": ""
   }
 ]
