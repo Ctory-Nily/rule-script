@@ -6,7 +6,7 @@
 本文件由脚本自动生成
 
 ## 规则统计
-最后同步时间: 2026年06月21日 17:19
+最后同步时间: 2026年06月21日 17:24
 
 各类型规则统计:
 | 类型        | 数量(条) |
@@ -32,4 +32,4 @@ https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/rules/Clash/Bangum
 Bangumi.yaml, 请使用 behavior: 'classical'
 
 ## 规则来源
-- https://raw.githubusercontent.com/Ctory-Nily/rule-script/refs/heads/main/user_rule/Bangumi.list 
+- https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/Bangumi.list 
