@@ -1,0 +1,20 @@
+# 规则名称: CopyManga
+# 规则总数量: 8
+# DOMAIN: 0
+# DOMAIN-SUFFIX: 8
+# DOMAIN-KEYWORD: 0
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# IP-SUFFIX: 0
+# IP-ASN: 0
+# PROCESS-NAME: 0
+# AND: 0
+
+DOMAIN-SUFFIX,api.manga2025.com
+DOMAIN-SUFFIX,api.mangacopy.com
+DOMAIN-SUFFIX,mapi.elfgjfghkk.club
+DOMAIN-SUFFIX,mapi.fgjfghkk.club
+DOMAIN-SUFFIX,mapi.fgjfghkkcenter.club
+DOMAIN-SUFFIX,mapi.hotmangasd.com
+DOMAIN-SUFFIX,mapi.hotmangasf.com
+DOMAIN-SUFFIX,mapi.hotmangasg.com
