@@ -1,13 +1,4 @@
-# 规则名称: ZaiManga 
-# 规则总数量: 3 
-# 更新时间: 2026年06月21日 21:55 
-# DOMAIN: 3 
-# DOMAIN-SUFFIX: 3 
-# DOMAIN-KEYWORD: 0 
-# IP-CIDR: 0 
-# IP-CIDR6: 0 
-# IP-SUFFIX: 0 
-
-DOMAIN-SUFFIX,m.zaimanhua.com
-DOMAIN-SUFFIX,manhua.zaimanhua.com
+DOMAIN,m.zaimanhua.com
+DOMAIN,manhua.zaimanhua.com
+DOMAIN,www.zaimanhua.com
 DOMAIN-SUFFIX,zaimanhua.com
