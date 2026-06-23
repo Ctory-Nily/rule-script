@@ -264,5 +264,19 @@
       "https://raw.githubusercontent.com/Ctory-Nily/rule-script/main/user_rule/Bangumi.list"
     ],
     "cn_name": ""
+  },
+    {
+    "rule_name": "Baidu",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Baidu/Baidu.list"
+    ],
+    "cn_name": "百度"
+  },
+    {
+    "rule_name": "BaiDuTieBa",
+    "rules_urls": [
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BaiDuTieBa/BaiDuTieBa.list"
+    ],
+    "cn_name": "百度贴吧"
   }
 ]
