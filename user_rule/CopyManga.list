@@ -1,13 +1,23 @@
+# 规则名称: CopyManga 
+# 规则总数量: 13 
+# 更新时间: 2026年06月23日 10:52 
+# DOMAIN: 13 
+# DOMAIN-SUFFIX: 2 
+# DOMAIN-KEYWORD: 0 
+# IP-CIDR: 0 
+# IP-CIDR6: 0 
+# IP-SUFFIX: 0 
+
 DOMAIN,api.manga2025.com
 DOMAIN,api.mangacopy.com
+DOMAIN,m.manga2025.com
 DOMAIN,mapi.elfgjfghkk.club
 DOMAIN,mapi.fgjfghkk.club
 DOMAIN,mapi.fgjfghkkcenter.club
 DOMAIN,mapi.hotmangasd.com
 DOMAIN,mapi.hotmangasf.com
 DOMAIN,mapi.hotmangasg.com
-DOMAIN,www.mangacopy.com
-DOMAIN-SUFFIX,mangacopy.com
-DOMAIN,m.manga2025.com
 DOMAIN,www.manga2025.com
+DOMAIN,www.mangacopy.com
 DOMAIN-SUFFIX,manga2025.com
+DOMAIN-SUFFIX,mangacopy.com
