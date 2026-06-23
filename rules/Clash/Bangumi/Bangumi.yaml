@@ -1,7 +1,7 @@
 # 规则名称: Bangumi
-# 规则总数量: 3
+# 规则总数量: 4
 # DOMAIN: 0
-# DOMAIN-SUFFIX: 3
+# DOMAIN-SUFFIX: 4
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 0
 # IP-CIDR6: 0
@@ -13,4 +13,5 @@
 payload:
   - DOMAIN-SUFFIX,bangumi.tv
   - DOMAIN-SUFFIX,bgm.tv
+  - DOMAIN-SUFFIX,bgm.wiki
   - DOMAIN-SUFFIX,chii.in
