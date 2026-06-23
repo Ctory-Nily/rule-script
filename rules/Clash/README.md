@@ -2,9 +2,9 @@
 本文件由脚本自动生成
 
 ## 规则列表
-处理的规则总计: 35 
+处理的规则总计: 37 
 
-最后同步时间: 2026年06月23日 10:53 
+最后同步时间: 2026年06月23日 22:19 
 
 | 规则名称 |    |     |     |     |
 |----------|----------|----------|----------|----------|
@@ -15,3 +15,4 @@
 | [推特](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Twitter) | [OpenAI](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/OpenAI) | [GitHub](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/GitHub) | [Claude](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Claude) | [Discord](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Discord) |
 | [Epic](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Epic) | [Talkatone](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Talkatone) | [Steam_CN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Steam_CN) | [Steam](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Steam) | [DownloadCDN_CN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/DownloadCDN_CN) |
 | [DownloadCDN](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/DownloadCDN) | [EH_Hentai](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/EH_Hentai) | [拷贝漫画](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/CopyManga) | [再漫画](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/ZaiManga) | [Bangumi](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Bangumi) |
+| [百度](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/Baidu) | [百度贴吧](https://github.com/Ctory-Nily/rule-script/tree/main/rules/Clash/BaiDuTieBa) |
