@@ -1,6 +1,6 @@
 # 规则名称: YouTube
-# 规则总数量: 185
-# DOMAIN: 2
+# 规则总数量: 183
+# DOMAIN: 0
 # DOMAIN-SUFFIX: 179
 # DOMAIN-KEYWORD: 1
 # IP-CIDR: 2
@@ -11,8 +11,6 @@
 # AND: 0
 
 payload:
-  - DOMAIN,youtubei.googleapis.com
-  - DOMAIN,yt3.ggpht.com
   - DOMAIN-SUFFIX,ggpht.cn
   - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,googlevideo.com
