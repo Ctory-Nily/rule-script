@@ -1,9 +1,9 @@
 # 规则名称: Telegram
-# 规则总数量: 64
+# 规则总数量: 65
 # DOMAIN: 4
 # DOMAIN-SUFFIX: 26
 # DOMAIN-KEYWORD: 2
-# IP-CIDR: 14
+# IP-CIDR: 15
 # IP-CIDR6: 7
 # IP-SUFFIX: 0
 # IP-ASN: 5
@@ -47,6 +47,7 @@ payload:
   - IP-CIDR,139.59.210.98/32,no-resolve
   - IP-CIDR,149.154.160.0/20,no-resolve
   - IP-CIDR,185.76.151.0/24,no-resolve
+  - IP-CIDR,194.221.250.50/32,no-resolve
   - IP-CIDR,196.55.216.167/32,no-resolve
   - IP-CIDR,5.28.192.0/18,no-resolve
   - IP-CIDR,91.105.192.0/23,no-resolve
