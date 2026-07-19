@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 222
+# 规则总数量: 223
 # DOMAIN: 10
-# DOMAIN-SUFFIX: 199
+# DOMAIN-SUFFIX: 200
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 13
 # IP-CIDR6: 0
@@ -121,6 +121,7 @@ DOMAIN-SUFFIX,embyplus.club
 DOMAIN-SUFFIX,embyplus.org
 DOMAIN-SUFFIX,embyserver.ga
 DOMAIN-SUFFIX,embytv.cf
+DOMAIN-SUFFIX,feimu.tv
 DOMAIN-SUFFIX,feiniu.lol
 DOMAIN-SUFFIX,free.28.al
 DOMAIN-SUFFIX,freetz.top
