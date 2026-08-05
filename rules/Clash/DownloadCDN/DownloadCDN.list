@@ -1,5 +1,5 @@
 # 规则名称: DownloadCDN
-# 规则总数量: 185
+# 规则总数量: 183
 # DOMAIN: 176
 # DOMAIN-SUFFIX: 6
 # DOMAIN-KEYWORD: 1
@@ -8,7 +8,7 @@
 # IP-SUFFIX: 0
 # IP-ASN: 0
 # PROCESS-NAME: 0
-# AND: 2
+# AND: 0
 
 DOMAIN,account-api.bandainamcoid.com
 DOMAIN,account.bandainamcoid.com
@@ -193,5 +193,3 @@ DOMAIN-SUFFIX,hf.co
 DOMAIN-SUFFIX,steamcontent.com
 DOMAIN-SUFFIX,storage.live.com
 DOMAIN-KEYWORD,epicgames-download
-AND,((DOMAIN-KEYWORD,cache),(DOMAIN-SUFFIX,steamcontent.com))
-AND,((DOMAIN-KEYWORD,cdn),(DOMAIN-KEYWORD,-epicgames-))
