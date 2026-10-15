@@ -1,7 +1,7 @@
 # 规则名称: TikTok
-# 规则总数量: 94
+# 规则总数量: 97
 # DOMAIN: 22
-# DOMAIN-SUFFIX: 60
+# DOMAIN-SUFFIX: 63
 # DOMAIN-KEYWORD: 9
 # IP-CIDR: 0
 # IP-CIDR6: 0
@@ -49,6 +49,9 @@ payload:
   - DOMAIN-SUFFIX,byteoversea.net
   - DOMAIN-SUFFIX,bytetcdn.com
   - DOMAIN-SUFFIX,capcut.com
+  - DOMAIN-SUFFIX,capcutapi.com
+  - DOMAIN-SUFFIX,capcutapi.us
+  - DOMAIN-SUFFIX,capcutstatic.com
   - DOMAIN-SUFFIX,ibytedtos.com
   - DOMAIN-SUFFIX,ibyteimg.com
   - DOMAIN-SUFFIX,ipstatp.com
