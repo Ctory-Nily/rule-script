@@ -1,7 +1,7 @@
 # 规则名称: Emby
-# 规则总数量: 224
+# 规则总数量: 225
 # DOMAIN: 10
-# DOMAIN-SUFFIX: 201
+# DOMAIN-SUFFIX: 202
 # DOMAIN-KEYWORD: 0
 # IP-CIDR: 13
 # IP-CIDR6: 0
@@ -216,6 +216,7 @@ DOMAIN-SUFFIX,wiri.tk
 DOMAIN-SUFFIX,xiaoyi.one
 DOMAIN-SUFFIX,xmsl.org
 DOMAIN-SUFFIX,younoyes.com
+DOMAIN-SUFFIX,yuanshen.help
 DOMAIN-SUFFIX,yunti.online
 DOMAIN-SUFFIX,zabc.net
 DOMAIN-SUFFIX,zi0.icu
