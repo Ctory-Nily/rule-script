@@ -1,6 +1,6 @@
 # 规则名称: PayPal
-# 规则总数量: 247
-# DOMAIN: 0
+# 规则总数量: 248
+# DOMAIN: 1
 # DOMAIN-SUFFIX: 246
 # DOMAIN-KEYWORD: 1
 # IP-CIDR: 0
@@ -11,6 +11,7 @@
 # AND: 0
 
 payload:
+  - DOMAIN,venmo.s3.amazonaws.com
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
   - DOMAIN-SUFFIX,account-paypal.org
